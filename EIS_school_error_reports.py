@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[11]:
 
 
 #!/usr/bin/env python
@@ -28,6 +28,8 @@ import time
 
 logging.basicConfig(filename='EIS_process.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
+
+logging.info('\n\n-------------EIS school error reports log')
 
 
 # Specify the download directory
@@ -105,6 +107,7 @@ def get_to_EIS_homepage_with_retry(max_retries=4):
             time.sleep(3)  # Add a delay before retrying
 
     print(f"Max retries reached ({max_retries}). Function failed.")
+    logging.info(f'Max retries reached ({max_retries}). Function failed')
     
     
 get_to_EIS_homepage_with_retry(max_retries=4)
@@ -207,8 +210,7 @@ def launch_application(xpaths1, xpaths2, schools1, app_choice, max_retries=4, re
                 print(f'Max retries reached for {schools1}. Giving up.')
 
                 
-                
-# Need to params to match up on the flow
+# -----------------------Download School Error Reports-----------------------------------
                 
 def download_school_error_reports(xpaths1, schools1, xpaths2):
     
@@ -275,40 +277,16 @@ def download_school_error_reports(xpaths1, schools1, xpaths2):
     go_button = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr[2]/td[3]/a/img'))
     )
-    #download the file
-    go_button.click()
-    driver.close()        
     
-     
-
-def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
-
-    open_app_select_school(xpaths1, xpaths2, schools1, data_reports_image)
-    launch_application(xpaths1, xpaths2, schools1, 'Data_Reports', max_retries=4, retry_delay=5)
-
-
-    adm_audit = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.ID, 'MainContent_HyperLink1'))
-    )
-
-    adm_audit.click()
-
-    #could not get this dropdown to work without a brief sleep
-    time.sleep(3)
-
-    dropdown = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
-    )
-
-    dropdown.click()
-
-
-    file_download = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
-    )
-
-    file_download.click()
-    driver.close()
+    try:
+        #download the file
+        go_button.click()
+        driver.close()   
+        logging.info(f'Downloaded {schools1} school error reports')
+        
+    except Exception as e:
+        logging.info(f'Failed to download {schools1} school error reports')
+            
     
 # ---------------------------------------------Declaring Final Functions and recursive variables-------------------------------------------------
 
@@ -333,7 +311,9 @@ def move_files(str_match, final_dest):
     target_dir = target_dir.rename(columns = {0: 'files'})
     
     print(target_dir)
-
+    logging.info(target_dir)
+    
+    
     # move audit files over to proper directory
 
     for file in target_dir['files']:

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[ ]:
 
 
 #!/usr/bin/env python
@@ -9,10 +9,6 @@
 
 # In[6]:
 
-from sqlalchemy import create_engine
-import urllib
-import sqlalchemy
-import pyodbc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -24,14 +20,14 @@ from bs4 import BeautifulSoup
 import os
 import time
 import pandas as pd
-from gspread_pandas import Spread, Client
-import gspread_pandas
 import shutil
 import logging
 import time
 
 logging.basicConfig(filename='EIS_process.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
+
+logging.info('\n\n-------------EIS adm audit student membership log')
 
 
 # Specify the download directory
@@ -109,6 +105,7 @@ def get_to_EIS_homepage_with_retry(max_retries=4):
             time.sleep(3)  # Add a delay before retrying
 
     print(f"Max retries reached ({max_retries}). Function failed.")
+    logging.info(f'Max retries reached ({max_retries}). Function failed')
     
     
 get_to_EIS_homepage_with_retry(max_retries=4)
@@ -139,13 +136,15 @@ def open_app_select_school(xpaths1, xpaths2, schools1, app_xpath):
         
         pass
         
-    
-    #click on image
-    span_element = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, app_xpath))
-    )
+    try:
+        #click on image
+        span_element = WebDriverWait(driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, app_xpath))
+        )
 
-    span_element.click()
+        span_element.click()
+    except:
+        logging.info('EIS webpage failed to load')
 
     dropdown = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'mat-select-arrow-wrapper'))
@@ -226,8 +225,22 @@ def launch_application(xpaths1, xpaths2, schools1, app_choice, max_retries=4, re
                 time.sleep(retry_delay)
             else:
                 print(f'Max retries reached for {schools1}. Giving up.')
+                logging.info(f'Max retries reached when launching app for {schools1}')
 
                 
+# ------------------------div style changed has to do with dropdown loading before clicking on it---------------
+                
+def div_style_changed():
+
+
+    div_locator = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'ctl00_MainContent_ReportViewer1_AsyncWait')))
+
+    style_attribute = div_locator.get_attribute("style")
+
+    output = style_attribute.split(";")[3].strip().split(':')[1].strip()
+
+    return(output == 'none')            
+    
                 
 
 
@@ -257,8 +270,15 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     file_download = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
     )
-
-    file_download.click()
+    
+    try:
+        file_download.click()
+        logging.info(f'Downloaded {schools1} adm audit')
+        
+    except Exception as e:
+        logging.info(f'Failed to download {schools1} adm audit')
+        
+    
     
     #---------------------------------------get student membership------------------------------
     
@@ -275,25 +295,38 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     )
 
     student_membership.click()
+    
+    
+    loaded = WebDriverWait(driver, 30).until(lambda driver: div_style_changed())
 
-    #could not get this dropdown to work without a brief sleep (could be replaced with if someting is displayed)
-    time.sleep(3)
-
+    if loaded == True:
+        print('variable loaded')
+    else:
+        time.sleep(3)
+        logging.info('Issue with the variable loading on the dropdown')
+        
+    
     dropdown = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
     )
-
-    dropdown.click()
-    #been an issue here with it moving too fast
-    time.sleep(3)
+    try:
+        dropdown.click()
+    except:
+        logging.info('Issue with the dropdown not loading fast enough')
+    
+    #could be an issue with moving too fast here. May need to implement laoding function here as well. 
     
     file_download = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
     )
-
-    file_download.click()
     
-    
+    try:
+        file_download.click()
+        logging.info(f'Downloaded {schools1} student membership')
+        
+    except Exception as e:
+        logging.info(f'Failed to download {schools1} student membership')
+        
     driver.close()
     
 # ---------------------------------------------Declaring Final Functions and recursive variables-------------------------------------------------
@@ -321,6 +354,7 @@ def move_files(str_match, final_dest):
     target_dir = target_dir.rename(columns = {0: 'files'})
     
     print(target_dir)
+    logging.info(target_dir)
 
     # move audit files over to proper directory
 
@@ -365,6 +399,6 @@ clean_dir(student_membership_path)
 
 move_files('ADM', adm_audit_path)
 move_files('Membership', student_membership_path)
-# move_files('')
 logging.info('ADM audit & Student Membership files downloaded and moved')
+driver.quit()
 
