@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-<<<<<<< HEAD
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-=======
->>>>>>> fa10864 (Sending updated adm audit student membership and batch file)
 # In[6]:
 
 from selenium import webdriver
@@ -23,6 +14,8 @@ from bs4 import BeautifulSoup
 import os
 import time
 import pandas as pd
+from gspread_pandas import Spread, Client
+import gspread_pandas
 import shutil
 import logging
 import time
@@ -30,7 +23,7 @@ import time
 logging.basicConfig(filename='EIS_process.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
 
-logging.info('\n\n-------------EIS adm audit student membership log')
+logging.info('\n\n-------------EIS school error reports log')
 
 
 # Specify the download directory
@@ -43,7 +36,7 @@ prefs = {'download.default_directory' : download_directory,
          'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
 chrome_options.add_experimental_option('prefs', prefs)
 
-chrome_service = Service(os.getcwd() + '\\ChromeDriver\\chromedriver.exe')
+chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
 driver = webdriver.Chrome(service = chrome_service, options=chrome_options)
 url = 'https://orion.tneducation.net'
 
@@ -122,32 +115,13 @@ def open_app_select_school(xpaths1, xpaths2, schools1, app_xpath):
     
     window_handles = driver.window_handles
     driver.switch_to.window(window_handles[0])
-    
-    
-    # In the recursive app launch it will sometimes fail back to the login. 
-    # If that is the case, hit the link login to get back to the page
-    
-    try:
 
-        link_login = WebDriverWait(driver, 8).until(
-        EC.element_to_be_clickable((By.ID, 'linkLogin'))
-        )
-        
-        link_login.click()
-        
-    except (NoSuchElementException, TimeoutException):
-        
-        pass
-        
-    try:
-        #click on image
-        span_element = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, app_xpath))
-        )
+    #click on image
+    span_element = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, app_xpath))
+    )
 
-        span_element.click()
-    except:
-        logging.info('EIS webpage failed to load')
+    span_element.click()
 
     dropdown = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'mat-select-arrow-wrapper'))
@@ -222,122 +196,96 @@ def launch_application(xpaths1, xpaths2, schools1, app_choice, max_retries=4, re
                 driver.back()
                 
                 #The xpaths should be good here as the switching happesn within the func 
-                open_app_select_school(xpaths1, xpaths2, schools1, data_reports_image)
+                open_app_select_school(xpaths1, xpaths2, schools1, eis_image)
 
                 # Wait before retrying
                 time.sleep(retry_delay)
             else:
                 print(f'Max retries reached for {schools1}. Giving up.')
-                logging.info(f'Max retries reached when launching app for {schools1}')
 
                 
-# ------------------------div style changed has to do with dropdown loading before clicking on it---------------
+# -----------------------Download School Error Reports-----------------------------------
                 
-def div_style_changed():
-
-
-    div_locator = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'ctl00_MainContent_ReportViewer1_AsyncWait')))
-
-    style_attribute = div_locator.get_attribute("style")
-
-    output = style_attribute.split(";")[3].strip().split(':')[1].strip()
-
-    return(output == 'none')            
+def download_school_error_reports(xpaths1, schools1, xpaths2):
     
-                
-
-
-def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
-
-    open_app_select_school(xpaths1, xpaths2, schools1, data_reports_image)
-    launch_application(xpaths1, xpaths2, schools1, 'Data_Reports', max_retries=4, retry_delay=5)
+    open_app_select_school(xpaths1, xpaths2, schools1, eis_image)
     
-    #the wrong app could be getting launched here, no reason for EIS production to be up
 
-    adm_audit = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.ID, 'MainContent_HyperLink1'))
+    launch_application(xpaths1, xpaths2, schools1, 'EIS', max_retries=4, retry_delay=5)
+
+    #-----------------In district tab, now submitting form and downloading the file------------------------
+    
+    submit_button = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.NAME, 'SUBMIT'))
+    )
+    submit_button.click()
+
+    #click on dynamic errors button
+    dynamic_errors = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, 'Dynamic Errors'))
+    )
+    dynamic_errors.click()
+
+    go_button = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/a/img'))
     )
 
-    adm_audit.click()
+    go_button.click()
 
-    #could not get this dropdown to work without a brief sleep
-    time.sleep(3)
+    # ----------------------------------------------------
 
     dropdown = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
+        EC.element_to_be_clickable((By.NAME, 'locat'))
+    )
+    dropdown.click()
+
+    School_Level_Errors = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/select/option[2]'))
     )
 
+    School_Level_Errors.click()
+
+    go_button = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/a/img'))
+    )
+
+    go_button.click()
+
+    # in next window now
+
+    dropdown = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.NAME, 'select2'))
+    )
     dropdown.click()
 
 
-    file_download = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
+
+    Download_All_School_Errors = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr[2]/td[3]/select/option[2]'))
+    )
+
+    Download_All_School_Errors.click()
+
+
+    #Got hung up HERE
+    go_button = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr[2]/td[3]/a/img'))
     )
     
     try:
-        file_download.click()
-        logging.info(f'Downloaded {schools1} adm audit')
+        #download the file
+        go_button.click()
+        driver.close()   
+        logging.info(f'Downloaded {schools1} school error reports')
         
     except Exception as e:
-        logging.info(f'Failed to download {schools1} adm audit')
-        
-    
-    
-    #---------------------------------------get student membership------------------------------
-    
-    driver.back()
-
-    research_queries = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@id="NavigationMenu"]/ul/li[4]/a'))
-    )
-
-    research_queries.click()
-
-    student_membership = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="MainContent_HyperLink19"]'))
-    )
-
-    student_membership.click()
-    
-    
-    loaded = WebDriverWait(driver, 30).until(lambda driver: div_style_changed())
-
-    if loaded == True:
-        print('variable loaded')
-    else:
-        time.sleep(3)
-        logging.info('Issue with the variable loading on the dropdown')
-        
-    
-    dropdown = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
-    )
-    try:
-        dropdown.click()
-    except:
-        logging.info('Issue with the dropdown not loading fast enough')
-    
-    #could be an issue with moving too fast here. May need to implement laoding function here as well. 
-    
-    file_download = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
-    )
-    
-    try:
-        file_download.click()
-        logging.info(f'Downloaded {schools1} student membership')
-        
-    except Exception as e:
-        logging.info(f'Failed to download {schools1} student membership')
-        
-    driver.close()
+        logging.info(f'Failed to download {schools1} school error reports')
+            
     
 # ---------------------------------------------Declaring Final Functions and recursive variables-------------------------------------------------
 
 #clean out the directories before the new sends
-
-adm_audit_path = 'P:\\Knowledge Management\\State Reporting\\TN\\EIS\\Exports\\EIS\\ADM Audit'
-student_membership_path = 'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\Student Membership List'
+eis_file_errors_path = 'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\EIS File Errors'
 
 def clean_dir(dir_path):
     if os.path.exists(dir_path):
@@ -358,7 +306,8 @@ def move_files(str_match, final_dest):
     
     print(target_dir)
     logging.info(target_dir)
-
+    
+    
     # move audit files over to proper directory
 
     for file in target_dir['files']:
@@ -390,18 +339,13 @@ school_dict_1 =  {'WDL' : ' SCH (Wooddale Middle School - Achievement School Dis
 
 combined_dict = zip(school_dict_1.items(), school_dict_2.items())
 
-    
 for (schools1, xpaths1), (schools2, xpaths2) in combined_dict:
-    get_adm_audit_student_membership(xpaths1, xpaths2, schools1)
+    download_school_error_reports(xpaths1, schools1, xpaths2)
     
 #Since process has ran with no bugs in the downloads, now clear the eis_file_errors dir, and move the files over  
 #Must call sleep to give the final download time to get in the directory
 time.sleep(15)
-clean_dir(adm_audit_path)
-clean_dir(student_membership_path)
-
-move_files('ADM', adm_audit_path)
-move_files('Membership', student_membership_path)
-logging.info('ADM audit & Student Membership files downloaded and moved')
-driver.quit()
+clean_dir(eis_file_errors_path)
+move_files('AllErr', eis_file_errors_path)
+logging.info('EIS file errors downloaded and moved')
 

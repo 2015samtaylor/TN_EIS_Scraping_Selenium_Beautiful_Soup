@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
 
 # In[6]:
+
+#currently a manual trigger at the beginning of the year, when new students are incoming
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
