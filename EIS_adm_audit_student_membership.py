@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+<<<<<<< HEAD
 # In[ ]:
 
 
 #!/usr/bin/env python
 # coding: utf-8
 
+=======
+>>>>>>> fa10864 (Sending updated adm audit student membership and batch file)
 # In[6]:
 
 from selenium import webdriver
