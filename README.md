@@ -3,6 +3,14 @@
 ### Introduction
 This Python script utilizes the Selenium and BeautifulSoup libraries to scrape student data from a web application called "EIS" (Education Information System). It logs into the application, searches for student information based on provided criteria, and extracts relevant data using BeautifulSoup and Selenium. The scraped data is then processed and cleaned using Pandas.
 
+EIS Cohort Tracking Scrape - Selenium script that scrapes and sends data to [DataTeamSandbox].[dbo].[EIS_enrollment_history]
+
+EIS ADM Audit Student - Selenium script that scrapes and sends ADM audit & Student Membership files from EIS and drops it in the following path:
+'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\ 
+
+EIS School Error Reports - Selenium script that scrapes and sends EIS school error reports  and drops it in the following path:
+'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\EIS File Errors'
+
 ### Prerequisites
 Before running the script, ensure that you have the following libraries installed:
 
