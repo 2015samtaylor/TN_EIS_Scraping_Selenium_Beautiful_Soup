@@ -1,6 +1,7 @@
 import pyodbc
 import pandas as pd
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -33,7 +34,7 @@ prefs = {'download.default_directory' : download_directory,
 chrome_options.add_experimental_option('prefs', prefs)
 
 chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
-driver = webdriver.Chrome(service = chrome_service, options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
 url = 'https://orion.tneducation.net/unauthorized'
 
 username = 'eduardo.ruedas@tneducation.net'

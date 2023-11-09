@@ -11,7 +11,8 @@ Before running the script, ensure that you have the following libraries installe
 - pandas
 - gspread_pandas
 
-You also need to have the Chrome WebDriver executable (`chromedriver.exe`) compatible with your Chrome browser version and place it in the `ChromeDriver` directory.
+
+ChromeDriver executbale is now a dynamic download within the script, no need to manually download and specify driver location anymore
 
 ### Setup and Configuration
 1. Define the download directory where the downloaded files will be stored using the `download_directory` variable.
