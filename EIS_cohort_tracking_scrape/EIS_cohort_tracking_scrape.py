@@ -17,7 +17,7 @@ import sqlalchemy
 import pyodbc
 from sqlalchemy import create_engine
 import urllib
-from sqlalchemy import create_engine, VARCHAR,Float
+from sqlalchemy import create_engine, VARCHAR,Float, Integer
 
 logging.basicConfig(filename='EIS_enrollment_scrape.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
@@ -165,7 +165,7 @@ def get_to_EIS_homepage():
     
 def scrape_student_data(df):
     #for testing purposes
-    # df = df.iloc[:100]
+    # df = df.iloc[200:400]
     
     df.rename(columns = {'First_Name': 'first_name', 'Last_Name': 'last_name', 'SSN': 'ssn', 'DOB': 'dob'}, inplace = True)
     df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y"))
@@ -354,12 +354,14 @@ def clean_up(frame):
     frame = pd.concat([frame, split_columns], axis=1)
     frame = frame.drop(columns = ['Name'])
 
+    # Define a regular expression pattern to match SSNs
+    ssn_pattern = re.compile(r'\d{3}-?\d{2}-?\d{4}')
 
     # Split out SSN, and EIS pin then drop original column
-    frame['SSN'] = frame['SSN PIN'].str[:11]
-    frame['EIS PIN'] = frame['SSN PIN'].str[11:]
-    frame = frame.drop(columns = ['SSN PIN'])
-    
+    frame['EIS PIN'] = frame['SSN PIN'].apply(lambda s: ssn_pattern.search(s).group() if ssn_pattern.search(s) else None)
+    frame['SSN'] = frame['SSN PIN'].apply(lambda s: ssn_pattern.sub('', s).strip() if ssn_pattern.search(s) else s)
+    frame['SSN'] = frame['SSN'].str.replace('n/a', '')  
+    frame = frame.drop(columns = ['SSN PIN'])  
     
     # Break apart ethnicity race, and concat back to the frame
     sub = frame['Ethnicity Race'].str.replace('\t', '').str.split(expand = True)
@@ -451,8 +453,10 @@ frame = pd.DataFrame(student_data)
 frame = frame.applymap(replace_non_breaking_space)
 frame = clean_up(frame)
 
-current_db_records = SQL_query_89('SELECT * FROM [DataTeamSandbox].[dbo].[EIS_enrollment_history]')
-new_records = get_new_records(frame, current_db_records)
+frame.to_csv('Entire_Scrape.csv', index =False)
+#Took out piece that only brings in new rows, issue last time was with data types not matching. 
+# current_db_records = SQL_query_89('SELECT * FROM [DataTeamSandbox].[dbo].[EIS_enrollment_history]')
+# new_records = get_new_records(frame, current_db_records)
 
 # ------------------------------------------------------------------create pyodbc engine to send data to sandbox------
 
@@ -466,9 +470,9 @@ engine = create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
 dtype_dict = {
     'eis_first_name':  VARCHAR(length=75),
     'eis_last_name':  VARCHAR(length=75),
-    'State ID': Float(),
+    'State ID': Integer(),
     'SSN': VARCHAR(length=75),
-    'EIS PIN': Float(),
+    'EIS PIN': VARCHAR(length=75),
     'Date of Birth': VARCHAR(length=75),
     'Gender': VARCHAR(length=75),
     'TOS': VARCHAR(length=75),
@@ -480,8 +484,8 @@ dtype_dict = {
 }
 
 try:
-    new_records.to_sql('EIS_enrollment_history' , schema='dbo', con = engine, if_exists = 'append', index = False, dtype = dtype_dict)
+    frame.to_sql('EIS_enrollment_history' , schema='dbo', con = engine, if_exists = 'replace', index = False, dtype = dtype_dict)
     logging.info('New records succesfully sent to EIS_enrollment_history, and new students appended to new_student_records.csv\n\n')
-    append_log_results()
+    # append_log_results()
 except Exception as e:
     logging.info('New students were UNABLE to send, error when trying to send as {e}\n\n')

@@ -3,4 +3,5 @@ new_student_records.csv
 *.log
 *.ipynb
 *.pyc
+*.csv
 

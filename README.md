@@ -19,7 +19,6 @@ Before running the script, ensure that you have the following libraries installe
 - pandas
 - gspread_pandas
 
-
 ChromeDriver executbale is now a dynamic download within the script, no need to manually download and specify driver location anymore
 
 ### Setup and Configuration
