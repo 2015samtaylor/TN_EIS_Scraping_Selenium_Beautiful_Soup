@@ -165,7 +165,8 @@ def scrape_student_data():
     spread = Spread('SSID Lookup', config=c)
 
     # Read data from an Excel sheet
-    df = spread.sheet_to_df(index = 1, sheet='23-24')   
+    df = spread.sheet_to_df(index = 1, sheet='23-24') 
+    df = df.iloc[1005:]  
     
     #TEMPORARY TESTING 
 #     df = df.iloc[:10]
@@ -403,3 +404,5 @@ else:
     logging.info('No new data to send')
     print('No new data to send')
 
+
+# %%
