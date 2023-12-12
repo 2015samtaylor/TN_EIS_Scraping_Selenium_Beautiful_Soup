@@ -8,6 +8,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
@@ -34,9 +35,9 @@ prefs = {'download.default_directory' : download_directory,
          'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
 chrome_options.add_experimental_option('prefs', prefs)
 
-chrome_service = Service(os.getcwd() + '\\ChromeDriver\\chromedriver.exe')
-driver = webdriver.Chrome(service = chrome_service, options=chrome_options)
-url = 'https://orion.tneducation.net/unauthorized'
+chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+url = 'https://orion.tneducation.net'
 
 username = 'eduardo.ruedas@tneducation.net'
 password = 'wTeT6u7o&^@F'
@@ -164,15 +165,17 @@ def scrape_student_data():
     c = gspread_pandas.conf.get_config(conf_dir=os.getcwd(), file_name='google_secret.json')
     spread = Spread('SSID Lookup', config=c)
 
-    # Read data from an Excel sheet
+    # Read data from an Excel sheet, drop rows with empty spaces based on index
     df = spread.sheet_to_df(index = 1, sheet='23-24') 
-    df = df.iloc[1005:]  
+    df = df.iloc[1000:]  
+    df = df.loc[df.index != '']
+    print(f'The length of the frame is {len(df)}')
     
     #TEMPORARY TESTING 
 #     df = df.iloc[:10]
     
      # Identify new names added into the sheet. 
-    df = df.loc[(df['Done'] == 'FALSE') & (df['search_results_provided'] == '')]
+    # df = df.loc[(df['Done'] == 'FALSE') & (df['search_results_provided'] == '')]
     
     #Only reading the first 10 columns
     df = df.iloc[:, :10]
@@ -368,20 +371,20 @@ def clean_frame_and_rearrange(frame):
 
 # -------------------------------send new data to Google Sheets------------------------------------
 
-def send_new_data_to_sheets():
+def send_new_data_to_sheets(frame):
     # create spread instance, and send to SSID Lookip
     c = gspread_pandas.conf.get_config(conf_dir=os.getcwd(), file_name='google_secret.json')
     spread = Spread('SSID Lookup', config=c)
 
     # Get existing data if any for 23-24 New Data sheet
-    existing_data = spread.sheet_to_df(sheet='23-24 New Data')
+    # existing_data = spread.sheet_to_df(sheet='23-24 New Data')
 
     # Concatenate the new data with the existing data
-    concatenated_data = pd.concat([existing_data, frame], ignore_index=True)
+    # concatenated_data = pd.concat([existing_data, frame], ignore_index=True)
 
     # Write the concatenated data back to the Google Sheet
     try:
-        spread.df_to_sheet(concatenated_data, headers=True, replace=True, sheet='23-24 New Data', index=False, freeze_headers=True)
+        spread.df_to_sheet(frame, headers=True, replace=True, sheet='23-24 New Data', index=False, freeze_headers=True)
     except:
         print('Issue sending data to Google Sheet')
 
@@ -395,7 +398,7 @@ if frame.empty == False:
     
     create_columns()
     frame = clean_frame_and_rearrange(frame)
-    send_new_data_to_sheets()
+    send_new_data_to_sheets(frame)
     
     logging.info(f'\nNew data sent to sheets - {len(frame)} records')
     print(f'\nNew data sent to sheets - {len(frame)} records')
@@ -405,4 +408,3 @@ else:
     print('No new data to send')
 
 
-# %%
