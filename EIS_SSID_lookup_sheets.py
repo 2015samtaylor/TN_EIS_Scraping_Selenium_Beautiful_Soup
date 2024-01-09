@@ -40,7 +40,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_opti
 url = 'https://orion.tneducation.net'
 
 username = 'eduardo.ruedas@tneducation.net'
-password = 'wTeT6u7o&^@F'
+password = 'll!MIPxP03'
 
 # -----------------------------------------------------
 
@@ -167,7 +167,7 @@ def scrape_student_data():
 
     # Read data from an Excel sheet, drop rows with empty spaces based on index
     df = spread.sheet_to_df(index = 1, sheet='23-24') 
-    df = df.iloc[1000:]  
+    df = df.iloc[999:]  
     df = df.loc[df.index != '']
     print(f'The length of the frame is {len(df)}')
     
