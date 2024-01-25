@@ -38,7 +38,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_opti
 url = 'https://orion.tneducation.net/unauthorized'
 
 username = 'eduardo.ruedas@tneducation.net'
-password = 'wTeT6u7o&^@F'
+password = 'll!MIPxP03'
 
 # -------------------------------Get Student Data to pass into the EIS---------------------------------------
 

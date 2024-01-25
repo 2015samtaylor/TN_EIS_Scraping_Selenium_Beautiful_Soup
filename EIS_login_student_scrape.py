@@ -39,7 +39,7 @@ driver = webdriver.Chrome(service = chrome_service, options=chrome_options)
 url = 'https://orion.tneducation.net/unauthorized'
 
 username = 'eduardo.ruedas@tneducation.net'
-password = 'wTeT6u7o&^@F'
+password = 'll!MIPxP03'
 
 # -----------------------------------------------------
 

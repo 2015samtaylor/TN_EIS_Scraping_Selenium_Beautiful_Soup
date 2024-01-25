@@ -42,7 +42,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_opti
 url = 'https://orion.tneducation.net'
 
 username = 'eduardo.ruedas@tneducation.net'
-password = 'wTeT6u7o&^@F'
+password = 'll!MIPxP03'
 
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution

@@ -35,12 +35,11 @@ prefs = {'download.default_directory' : download_directory,
          'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
 chrome_options.add_experimental_option('prefs', prefs)
 
-chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
 driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
 url = 'https://orion.tneducation.net'
 
 username = 'eduardo.ruedas@tneducation.net'
-password = 'wTeT6u7o&^@F'
+password = 'll!MIPxP03'
 
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
