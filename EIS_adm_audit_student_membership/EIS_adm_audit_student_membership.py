@@ -255,14 +255,13 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     time.sleep(3)
 
     dropdown = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
+    EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
     )
 
     dropdown.click()
 
-
     file_download = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
+    EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
     )
     
     try:
@@ -298,20 +297,21 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     else:
         time.sleep(3)
         logging.info('Issue with the variable loading on the dropdown')
-        
+    
+    
     
     dropdown = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.XPATH, '//*[@id="ctl00_MainContent_ReportViewer1_ctl05_ctl04_ctl00_Button"]'))
+    EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
     )
     try:
         dropdown.click()
     except:
         logging.info('Issue with the dropdown not loading fast enough')
     
-    #could be an issue with moving too fast here. May need to implement laoding function here as well. 
+    #could be an issue with moving too fast here. May need to implement loading function here as well. 
     
     file_download = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '/html/body/form/div[3]/div[2]/span/div/table/tbody/tr[4]/td/div/div/div[4]/table/tbody/tr/td/div[2]/div[1]/a'))
+    EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
     )
     
     try:
