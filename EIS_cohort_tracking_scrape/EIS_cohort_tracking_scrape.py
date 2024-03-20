@@ -168,7 +168,8 @@ def scrape_student_data(df):
     # df = df.iloc[200:400]
     
     df.rename(columns = {'First_Name': 'first_name', 'Last_Name': 'last_name', 'SSN': 'ssn', 'DOB': 'dob'}, inplace = True)
-    df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y"))
+    # df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y"))
+    df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y") if x is not None else None)
     
 
     #cleaning

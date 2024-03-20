@@ -396,5 +396,3 @@ move_files('Membership', student_membership_path)
 logging.info('ADM audit & Student Membership files downloaded and moved')
 driver.quit()
 
-
-# %%
