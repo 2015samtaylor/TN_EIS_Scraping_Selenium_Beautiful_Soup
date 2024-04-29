@@ -254,15 +254,21 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     #could not get this dropdown to work without a brief sleep
     time.sleep(3)
 
+    # dropdown = WebDriverWait(driver, 30).until(
+    # EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
+    # )
     dropdown = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
+    EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
     )
 
     dropdown.click()
 
+    # file_download = WebDriverWait(driver, 30).until(
+    # EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
+    # )
     file_download = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
-    )
+    EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
+   )
     
     try:
         file_download.click()
@@ -300,8 +306,11 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     
     
     
+    # dropdown = WebDriverWait(driver, 30).until(
+    # EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
+    # )
     dropdown = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.CLASS_NAME, "glyphui-downarrow"))
+    EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
     )
     try:
         dropdown.click()
@@ -310,9 +319,12 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
     
     #could be an issue with moving too fast here. May need to implement loading function here as well. 
     
+    # file_download = WebDriverWait(driver, 30).until(
+    # EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
+    # )
     file_download = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((By.XPATH, "//a[@class='ActiveLink' and @title='CSV (comma delimited)']"))
-    )
+    EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
+   )
     
     try:
         file_download.click()
@@ -327,8 +339,8 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
 
 #clean out the directories before the new sends
 
-adm_audit_path = 'P:\\Knowledge Management\\State Reporting\\TN\\EIS\\Exports\\EIS\\ADM Audit'
-student_membership_path = 'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\Student Membership List'
+adm_audit_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\ADM Audit'
+student_membership_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\Student Membership List'
 
 def clean_dir(dir_path):
     if os.path.exists(dir_path):
@@ -396,3 +408,5 @@ move_files('Membership', student_membership_path)
 logging.info('ADM audit & Student Membership files downloaded and moved')
 driver.quit()
 
+
+# %%
