@@ -28,7 +28,7 @@ logging.info('\n\n-------------EIS school error reports log')
 
 
 # Specify the download directory
-download_directory = r"P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\Holding_Dir"  
+download_directory = r"P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\Holding_Dir"  
 
 # Set up Chrome options
 chrome_options = webdriver.ChromeOptions()
@@ -286,7 +286,7 @@ def download_school_error_reports(xpaths1, schools1, xpaths2):
 # ---------------------------------------------Declaring Final Functions and recursive variables-------------------------------------------------
 
 #clean out the directories before the new sends
-eis_file_errors_path = 'P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\EIS File Errors'
+eis_file_errors_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\EIS File Errors'
 
 def clean_dir(dir_path):
     if os.path.exists(dir_path):
@@ -350,3 +350,5 @@ clean_dir(eis_file_errors_path)
 move_files('AllErr', eis_file_errors_path)
 logging.info('EIS file errors downloaded and moved')
 
+
+# %%
