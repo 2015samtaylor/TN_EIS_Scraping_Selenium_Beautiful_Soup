@@ -171,6 +171,9 @@ def scrape_student_data(df):
     # df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y"))
     df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y") if x is not None else None)
     
+    df = df.dropna(subset=['dob'])  # Drop rows where DOB is None
+    df = df.reset_index(drop=True)  # Reset the index
+    
 
     #cleaning
     df['first_name'] = df['first_name'].fillna('')
