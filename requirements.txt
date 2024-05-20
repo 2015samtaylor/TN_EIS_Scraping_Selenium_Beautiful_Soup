@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.3
+gspread_pandas==3.2.2
+numpy==1.23.4
+pandas==1.5.1
+pyodbc==4.0.35
+selenium==4.21.0
+SQLAlchemy==1.4.46
+webdriver_manager==4.0.1
