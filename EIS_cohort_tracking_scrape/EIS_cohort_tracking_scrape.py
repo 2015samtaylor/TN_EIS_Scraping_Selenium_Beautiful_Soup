@@ -15,9 +15,10 @@ import re
 import numpy as np
 import sqlalchemy
 import pyodbc
-from sqlalchemy import create_engine
 import urllib
-from sqlalchemy import create_engine, VARCHAR,Float, Integer
+import pysftp
+from config import SFTP_conn_pass
+
 
 logging.basicConfig(filename='EIS_enrollment_scrape.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
@@ -168,10 +169,11 @@ def scrape_student_data(df):
     # df = df.iloc[200:400]
     
     df.rename(columns = {'First_Name': 'first_name', 'Last_Name': 'last_name', 'SSN': 'ssn', 'DOB': 'dob'}, inplace = True)
-    # df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y"))
+
+    #Drop rows with NaN values for dob
+    df = df.dropna(subset=['dob'])
+    df['dob'] = pd.to_datetime(df['dob'])
     df['dob'] = df['dob'].apply(lambda x: x.strftime("%m/%d/%Y") if x is not None else None)
-    
-    df = df.dropna(subset=['dob'])  # Drop rows where DOB is None
     df = df.reset_index(drop=True)  # Reset the index
     
 
@@ -340,6 +342,7 @@ def scrape_student_data(df):
         driver.back()
           
     #return the student data outside of each for loop
+    driver.close()
     return(student_data)
 
 # -----------------------------------------Functions to clean up the HTML--------------------------------
@@ -387,109 +390,66 @@ def clean_up(frame):
 
     return(frame)
 
-# --------------------------Query for existing records, find out what is new, append to log_results.csv---------------------
+# --------------------Establish SFTP conn to drop file in folder---------------------------
+def SFTP_conn(sftp_pass, local_file_path, SFTP_folder_name):
+    sftp = None  # Initialize sftp outside the try block
+    
+    try:
+        cnopts = pysftp.CnOpts()
+        cnopts.hostkeys = None  # Disable host key checking
 
-def SQL_query_89(query):
-    odbc_name = 'GD_DW_89'
-    conn = pyodbc.connect(f'DSN={odbc_name};')
-    df_SQL = pd.read_sql_query(query, con = conn)
-    return(df_SQL)
-
-
-def get_new_records(frame, current_db_records):
-    # Combine the two DataFrames into one
-    combined_df = pd.concat([frame, current_db_records], ignore_index=True)
-
-    # Identify the duplicates (existing records)
-    duplicates = combined_df[combined_df.duplicated(keep='first')]
-
-    # Find the new records by excluding the duplicates from df2
-    new_records = current_db_records[~current_db_records.isin(duplicates)].dropna()
-
-    #Fix the SSN 
-    new_records['SSN'] = new_records['SSN'].str.replace(r'^n/a', '', regex=True)
-
-    return(new_records)
-
-
-# ------------------------------------------------------------------------------------
-# These log_results are based on last update
-
-def append_log_results():
-
-    file = os.getcwd() + '\\new_student_records.csv'
-
-    # Check if the file exists before writing
-    if not os.path.exists(file):
+        sftp = pysftp.Connection(
+            host="sftp.iotaschools.org",
+            username="iota.sftp",
+            password=sftp_pass,
+            cnopts=cnopts,
+        )
         
-        new_records.to_csv(file, index=False)
-
-    else:
-
-        # Read the master frame
-        df_source = pd.read_csv(file)
-
-        # Append the new log_results to the original
-        updated = pd.concat([df_source, log_results], ignore_index=True)
+        logging.info('SFTP connection established successfully')
         
-        updated = updated.drop_duplicates()
+        # Check if the destination folder exists, and create it if it doesn't
+        if not sftp.exists(SFTP_folder_name):
+            sftp.makedirs(SFTP_folder_name)
+            logging.info(f'Remote folder "{SFTP_folder_name}" created')
 
-        # Write the updated destination DataFrame back to the CSV file
-        updated.to_csv('log_results.csv', index=False)
+        # Send a file to the remote directory
+        remote_file_path = os.path.join(SFTP_folder_name, os.path.basename(local_file_path))
+        sftp.put(local_file_path, remote_file_path)
+
+        logging.info(f'File "{local_file_path}" sent to remote directory "{SFTP_folder_name}" as "{os.path.basename(local_file_path)}"')
         
+    except pysftp.ConnectionException as ce:
+        logging.error(f'Failed to establish SFTP connection: {ce}')
+    except pysftp.AuthenticationException as ae:
+        logging.error(f'Authentication error during SFTP connection: {ae}')
+    except Exception as e:
+        logging.error(f'An error occurred during SFTP operation: {e}')
 
-# --------------------------Calling the process------------------------------------------
-            
+    finally:
+        if sftp:
+            sftp.close()  # Close the connection if it was successfully opened
+            logging.info('SFTP conn closed')
+
+# --------------------
+
 get_to_EIS_homepage()
 
-query = SQL_query(
-'''
-SELECT First_Name, Last_Name, SSN, DOB, Gender, SchoolEntryDate
-FROM [PowerschoolStaged].[dbo].[vw_Rpt_TennStudents]
-WHERE SchoolEntryDate > '2020/08/01'
-ORDER BY SchoolEntryDate DESC
-''')
-            
+# query = SQL_query(
+# '''
+# SELECT First_Name, Last_Name, SSN, DOB, Gender, SchoolEntryDate
+# FROM [PowerschoolStaged].[dbo].[vw_Rpt_TennStudents]
+# WHERE SchoolEntryDate > '2020/08/01'
+# ORDER BY SchoolEntryDate DESC
+# ''')
+
+#This temporarily becomes a csv. Long term must reference BQ table eventually. 
+query = pd.read_csv(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\EIS_cohort_tracking_scrape\TN_students_05_30_24.csv')
 student_data = scrape_student_data(query)
 
 frame = pd.DataFrame(student_data)
-
 frame = frame.applymap(replace_non_breaking_space)
 frame = clean_up(frame)
+frame.to_csv('EIS_prior_schools.csv', index =False)
 
-frame.to_csv('Entire_Scrape.csv', index =False)
-#Took out piece that only brings in new rows, issue last time was with data types not matching. 
-# current_db_records = SQL_query_89('SELECT * FROM [DataTeamSandbox].[dbo].[EIS_enrollment_history]')
-# new_records = get_new_records(frame, current_db_records)
 
-# ------------------------------------------------------------------create pyodbc engine to send data to sandbox------
-
-quoted = urllib.parse.quote_plus("Driver={SQL Server Native Client 11.0};"
-                     "Server=10.0.0.89;"
-                     "Database=DataTeamSandbox;"
-                     "Trusted_Connection=yes;")
-
-engine = create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
-
-dtype_dict = {
-    'eis_first_name':  VARCHAR(length=75),
-    'eis_last_name':  VARCHAR(length=75),
-    'State ID': Integer(),
-    'SSN': VARCHAR(length=75),
-    'EIS PIN': VARCHAR(length=75),
-    'Date of Birth': VARCHAR(length=75),
-    'Gender': VARCHAR(length=75),
-    'TOS': VARCHAR(length=75),
-    'Grade': VARCHAR(length=75),
-    'District': VARCHAR(length=75),
-    'School': VARCHAR(length=75),
-    'Enrollment': VARCHAR(length=75),
-    'Withdraw': VARCHAR(length=75)
-}
-
-try:
-    frame.to_sql('EIS_enrollment_history' , schema='dbo', con = engine, if_exists = 'replace', index = False, dtype = dtype_dict)
-    logging.info('New records succesfully sent to EIS_enrollment_history, and new students appended to new_student_records.csv\n\n')
-    # append_log_results()
-except Exception as e:
-    logging.info('New students were UNABLE to send, error when trying to send as {e}\n\n')
+SFTP_conn(SFTP_conn_pass, 'Entire_Scrape.csv',  'EIS_prior_schools')
