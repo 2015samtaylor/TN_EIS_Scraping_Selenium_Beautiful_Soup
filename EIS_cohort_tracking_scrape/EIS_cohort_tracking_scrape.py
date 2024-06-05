@@ -13,11 +13,14 @@ import os
 import logging
 import re
 import numpy as np
-import sqlalchemy
-import pyodbc
 import urllib
-import pysftp
-from config import SFTP_conn_pass
+import sys
+
+# Add the parent directory to the Python path to get username, and password
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+from config import username, password
 
 
 logging.basicConfig(filename='EIS_enrollment_scrape.log', level=logging.INFO,
@@ -38,8 +41,6 @@ chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\Chr
 driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
 url = 'https://orion.tneducation.net/unauthorized'
 
-username = 'eduardo.ruedas@tneducation.net'
-password = 'll!MIPxP03'
 
 # -------------------------------Get Student Data to pass into the EIS---------------------------------------
 

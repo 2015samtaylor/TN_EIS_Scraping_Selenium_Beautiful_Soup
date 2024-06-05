@@ -15,11 +15,16 @@ from bs4 import BeautifulSoup
 import os
 import time
 import pandas as pd
-from gspread_pandas import Spread, Client
-import gspread_pandas
 import shutil
 import logging
 import time
+import sys
+
+# Add the parent directory to the Python path to get username, and password
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+from config import username, password
 
 logging.basicConfig(filename='EIS_process.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
@@ -38,11 +43,9 @@ prefs = {'download.default_directory' : download_directory,
 chrome_options.add_experimental_option('prefs', prefs)
 
 chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
-driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options = chrome_options)
 url = 'https://orion.tneducation.net'
 
-username = 'eduardo.ruedas@tneducation.net'
-password = 'll!MIPxP03'
 
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
@@ -286,7 +289,7 @@ def download_school_error_reports(xpaths1, schools1, xpaths2):
 # ---------------------------------------------Declaring Final Functions and recursive variables-------------------------------------------------
 
 #clean out the directories before the new sends
-eis_file_errors_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\EIS File Errors'
+eis_file_errors_path = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_outputs\EIS File Errors'
 
 def clean_dir(dir_path):
     if os.path.exists(dir_path):
@@ -350,5 +353,3 @@ clean_dir(eis_file_errors_path)
 move_files('AllErr', eis_file_errors_path)
 logging.info('EIS file errors downloaded and moved')
 
-
-# %%
