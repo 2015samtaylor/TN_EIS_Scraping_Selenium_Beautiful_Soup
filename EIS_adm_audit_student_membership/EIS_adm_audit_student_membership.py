@@ -18,6 +18,13 @@ import pandas as pd
 import shutil
 import logging
 import time
+import sys
+
+# Add the parent directory to the Python path to get username, and password
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+from config import username, password
 
 logging.basicConfig(filename='EIS_process.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
@@ -35,11 +42,9 @@ prefs = {'download.default_directory' : download_directory,
          'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
 chrome_options.add_experimental_option('prefs', prefs)
 
-driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options = chrome_options)
 url = 'https://orion.tneducation.net'
 
-username = 'eduardo.ruedas@tneducation.net'
-password = 'll!MIPxP03'
 
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
@@ -339,17 +344,23 @@ def get_adm_audit_student_membership(xpaths1, xpaths2, schools1):
 
 #clean out the directories before the new sends
 
-adm_audit_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\ADM Audit'
-student_membership_path = r'P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\Student Membership List'
+adm_audit_path = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_outputs\ADM Audit'
+student_membership_path = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_outputs\Student Membership List'
 
 def clean_dir(dir_path):
-    if os.path.exists(dir_path):
-        for item in os.listdir(dir_path):
-            item_path = os.path.join(dir_path, item)
-            if os.path.isfile(item_path):
-                os.remove(item_path)
-            else:
-                pass
+
+    # Ensure the directory exists
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+    for item in os.listdir(dir_path):
+        item_path = os.path.join(dir_path, item)
+        if os.path.isfile(item_path):
+            os.remove(item_path)
+        else:
+            pass
+
+
                 
 
 def move_files(str_match, final_dest):
