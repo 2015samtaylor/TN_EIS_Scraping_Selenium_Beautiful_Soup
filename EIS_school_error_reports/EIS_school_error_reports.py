@@ -33,7 +33,13 @@ logging.info('\n\n-------------EIS school error reports log')
 
 
 # Specify the download directory
-download_directory = r"P:\01-GDPST\TN - DAIS\State Reporting\TN\EIS\Exports\EIS\Holding_Dir"  
+download_directory = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\downloads'
+
+try:
+    os.makedirs(download_directory, exist_ok=True)
+    print(f'Directory "{download_directory}" created or already exists.')
+except Exception as e:
+    print(f'An error occurred while creating the directory: {e}')
 
 # Set up Chrome options
 chrome_options = webdriver.ChromeOptions()
@@ -301,24 +307,77 @@ def clean_dir(dir_path):
                 pass
                 
 
-def move_files(str_match, final_dest):
+def move_files(str_match, final_dest, download_directory):
+    # Ensure the final destination directory exists
+    os.makedirs(final_dest, exist_ok=True)
 
-    # Move the audits to the other folder. 
-    target_dir = pd.DataFrame(os.listdir(download_directory))
-    target_dir = target_dir.loc[target_dir[0].str.contains(str_match, case = False)]
-    target_dir = target_dir.rename(columns = {0: 'files'})
-    
-    print(target_dir)
-    logging.info(target_dir)
-    
-    
-    # move audit files over to proper directory
+    while True:
+        # Get the list of files to move
+        target_dir = pd.DataFrame(os.listdir(download_directory))
+        target_dir = target_dir.loc[target_dir[0].str.contains(str_match, case=False)]
+        target_dir = target_dir.rename(columns={0: 'files'})
 
-    for file in target_dir['files']:
-        source_path = os.path.join(download_directory, file)
-        destination_path = os.path.join(final_dest, file)
+        print(target_dir)
+        logging.info(target_dir)
 
-        shutil.move(source_path, destination_path)
+        all_files_moved = True  # Flag to check if all files are moved
+
+        # Move audit files over to proper directory
+        for file in target_dir['files']:
+            source_path = os.path.join(download_directory, file)
+            destination_path = os.path.join(final_dest, file)
+
+            # Skip files that are still being downloaded
+            if file.endswith('.crdownload'):
+                logging.info(f"Skipping {file} as it is still being downloaded.")
+                all_files_moved = False  # Not all files are moved yet
+                continue
+
+            # Move the file
+            try:
+                shutil.move(source_path, destination_path)
+                logging.info(f"Moved {file} to {final_dest}")
+            except PermissionError:
+                logging.info(f"File {file} is in use. Retrying in 10 seconds...")
+                all_files_moved = False  # Not all files are moved yet
+                time.sleep(10)
+
+        # If all files are moved, break the loop
+        if all_files_moved:
+            break
+        else:
+            # Wait a bit before checking again
+            time.sleep(5)
+
+def stack_files_send_to_SFTP(dir):
+
+    all_frames = []
+
+    for file in os.listdir(dir):
+        file_path = os.path.join(dir, file)
+        logging.info(f'Stacking {file_path}')
+        df  = pd.read_csv(file_path)
+
+        all_frames.append(df)
+
+    df = pd.concat(all_frames)
+    df = df.dropna(how='all')
+    today = pd.Timestamp.today().normalize()
+    df['Last_Update'] = today
+
+    sftp_path = r'S:\SFTP\EIS'
+
+    end_str = 'School_Error_Reports_stack.csv'
+
+    # Construct the output file path
+    output_path = os.path.join(sftp_path, end_str)
+
+    try:
+        # Save the DataFrame to the specified output path
+        df.to_csv(output_path, index=False)
+        logging.info(f'Sending stacked csv to {output_path}')
+    except Exception as e:
+        logging.info(f'Unable to send stacked csv to {output_path}')
         
 # ---------------------------Calling the process---------------------------------------
 
@@ -347,9 +406,11 @@ for (schools1, xpaths1), (schools2, xpaths2) in combined_dict:
     download_school_error_reports(xpaths1, schools1, xpaths2)
     
 #Since process has ran with no bugs in the downloads, now clear the eis_file_errors dir, and move the files over  
-#Must call sleep to give the final download time to get in the directory
-time.sleep(15)
+#Must call sleep to give the final download time to get in the directory, if file has .crdownload extension it is still being downloaded by chrome
 clean_dir(eis_file_errors_path)
-move_files('AllErr', eis_file_errors_path)
-logging.info('EIS file errors downloaded and moved')
+move_files('AllErr', eis_file_errors_path, download_directory)
+logging.info('EIS file errors downloaded and moved to EIS_outputs dir')
+
+stack_files_send_to_SFTP(eis_file_errors_path)
+driver.quit()
 

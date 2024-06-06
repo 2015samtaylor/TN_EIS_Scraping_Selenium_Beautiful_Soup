@@ -33,7 +33,13 @@ logging.info('\n\n-------------EIS adm audit student membership log')
 
 
 # Specify the download directory
-download_directory = r"P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\Holding_Dir"  
+download_directory = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_adm_audit_student_membership\downloads'
+
+try:
+    os.makedirs(download_directory, exist_ok=True)
+    print(f'Directory "{download_directory}" created or already exists.')
+except Exception as e:
+    print(f'An error occurred while creating the directory: {e}')
 
 # Set up Chrome options
 chrome_options = webdriver.ChromeOptions()
@@ -359,8 +365,6 @@ def clean_dir(dir_path):
             os.remove(item_path)
         else:
             pass
-
-
                 
 
 def move_files(str_match, final_dest):
@@ -380,6 +384,40 @@ def move_files(str_match, final_dest):
         destination_path = os.path.join(final_dest, file)
 
         shutil.move(source_path, destination_path)
+
+
+def stack_files_send_to_SFTP(dir):
+
+    all_frames = []
+
+    for file in os.listdir(dir):
+        file_path = os.path.join(dir, file)
+        logging.info(f'Stacking {file_path}')
+        df  = pd.read_csv(file_path, header=2)
+
+        all_frames.append(df)
+
+    df = pd.concat(all_frames)
+    df = df.dropna(how='all')
+    today = pd.Timestamp.today().normalize()
+    df['Last_Update'] = today
+
+    sftp_path = r'S:\SFTP\EIS'
+
+    if dir == adm_audit_path:
+        end_str = 'ADM_audit_stack.csv'
+    elif dir == student_membership_path:
+        end_str = 'Student_Membership_stack.csv'
+
+    # Construct the output file path
+    output_path = os.path.join(sftp_path, end_str)
+
+    try:
+        # Save the DataFrame to the specified output path
+        df.to_csv(output_path, index=False)
+        logging.info(f'Sending stacked csv to {output_path}')
+    except Exception as e:
+        logging.info(f'Unable to send stacked csv to {output_path}')
         
 # ---------------------------Calling the process---------------------------------------
 
@@ -414,9 +452,14 @@ time.sleep(15)
 clean_dir(adm_audit_path)
 clean_dir(student_membership_path)
 
+
 move_files('ADM', adm_audit_path)
 move_files('Membership', student_membership_path)
-logging.info('ADM audit & Student Membership files downloaded and moved')
+logging.info('ADM audit & Student Membership files downloaded and moved to EIS_outputs dir')
+
+stack_files_send_to_SFTP(adm_audit_path)
+stack_files_send_to_SFTP(student_membership_path)
+
 driver.quit()
 
 
