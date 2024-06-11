@@ -33,39 +33,62 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
                 EC.element_to_be_clickable((By.ID, 'linkLogin'))
             )
 
-            # Click on the link
-            login_link.click()
+            try:
+                # Click on the link
+                login_link.click()
+                logging.info('Clicked login link')
+            except:
+                logging.info('Unable to click login link')
 
             # Wait for login box to appear, and send username
             username_input = WebDriverWait(driver, 30).until(
                 EC.element_to_be_clickable((By.NAME, 'loginfmt'))
             )
-            username_input.send_keys(username)
+            try:
+                username_input.send_keys(username)
+                logging.info('Username sent')
+            except:
+                logging.info('Unable to send username')
 
             submit = WebDriverWait(driver, 30).until(
                 EC.element_to_be_clickable((By.ID, 'idSIButton9'))
             )
 
-            submit.click()
+            try:
+                submit.click()
+                logging.info('Submitted username')
+            except:
+                logging.info('Unable to submit username')
+
 
             # Wait for password input to appear, and send password
             password_input = WebDriverWait(driver, 30).until(
                 EC.element_to_be_clickable((By.NAME, 'passwd'))
             )
-            password_input.send_keys(password)
+            try:
+                password_input.send_keys(password)
+                logging.info('Sent password')
+            except:
+                logging.info("Unable to send password")
 
             submit = WebDriverWait(driver, 30).until(
                 EC.element_to_be_clickable((By.ID, 'idSIButton9'))
             )
 
-            submit.click()
+            try:
+                submit.click()
+                logging.info('Submitted username and password')
+            except:
+                logging.info('Unable to submit username and password')
 
-            # If we've reached this point without exceptions, the function has succeeded
-            return
+
+            # If we've reached this point without exceptions, the function has succeeded, can exit the while loop
+            return('Success')
 
         except Exception as e:
             print(f"An error occurred: {str(e)}")
             print("Retrying...")
+            logging.info(f'An error occured: {e} retrying')
             retries += 1
             time.sleep(3)  # Add a delay before retrying
 
@@ -74,8 +97,8 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
     
 
 # -------------------------------------------Begin Downloads---------------------------------------------------------------
-eis_image = '//*[@id="orion-application"]/div[2]/tdoe-sidebar-layout/mat-sidenav-container/mat-sidenav-content/div/div[2]/article/app-orion-application-list/main/div/div/div[2]/app-orion-launch-card/mat-card/div'
-data_reports_image = '//*[@id="orion-application"]/div[2]/tdoe-sidebar-layout/mat-sidenav-container/mat-sidenav-content/div/div[2]/article/app-orion-application-list/main/div/div/div[1]/app-orion-launch-card/mat-card/div'
+data_reports_image = f"//img[@src='{'/assets/img/applications/EISREPORTING.gif'}']"
+eis_image = f"//img[@src='{'/assets/img/applications/EISPROD.gif'}']"
 
 
 def open_app_select_school(xpaths1, xpaths2, schools1, app_xpath, driver):
@@ -88,28 +111,33 @@ def open_app_select_school(xpaths1, xpaths2, schools1, app_xpath, driver):
         EC.element_to_be_clickable((By.XPATH, app_xpath))
     )
 
-    span_element.click()
+    try:
+        span_element.click()
+        logging.info(f'Clicked on {app_xpath}')
+    except:
+        logging.info(f'Unable to click on {app_xpath}')
 
     dropdown = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'mat-select-arrow-wrapper'))
     )
-    dropdown.click()
+    try:
+        dropdown.click()
+        logging.info('Clicked on dropdown')
+    except:
+        logging.info('Unable to click on dropdown')
     
-    
-    #Here is where the try except needs to go for when the app is re-launched
-    # The x paths change
     
     try:
-        school_choice = WebDriverWait(driver, 30).until(
+        school_choice = WebDriverWait(driver, 15).until(
             EC.element_to_be_clickable((By.XPATH, '//span[@class="mat-option-text" and text()="{}"]'.format(xpaths1)))
         )
-        print(f"school_choice element found and clickable through {xpaths1}.")
+        logging.info(f"school_choice element found and clickable through {xpaths1}.")
         school_choice.click()
 
     except (TimeoutException, NoSuchElementException, NoSuchWindowException, AttributeError) as e:
-        print(f"First xpath did not work for school - {schools1}")
-        print(f'Trying this xpath {xpaths2}')
-        school_choice = WebDriverWait(driver, 30).until(
+        logging.info(f"First xpath did not work for school - {schools1}")
+        logging.info(f'Trying this xpath {xpaths2}')
+        school_choice = WebDriverWait(driver, 15).until(
             EC.element_to_be_clickable((By.XPATH, '//span[@class="mat-option-text" and text()="{}"]'.format(xpaths2)))
         )
         school_choice.click()
@@ -147,14 +175,14 @@ def launch_application(xpaths1, xpaths2, schools1, app_choice, driver, max_retri
                 research_queries.click()
             
             else:
-                print('app variable is wrong')
+                logging.info('app variable is wrong')
             
 
             # If the launch was successful, break out of the retry loop
             break
 
         except (TimeoutException, NoSuchElementException, NoSuchWindowException, AttributeError) as e:
-            print(f'Issue launching app for {schools1}')
+            logging.info(f'Issue launching app for {schools1}')
             if retry < max_retries - 1:
                 # recreate conn with window
                 window_handles = driver.window_handles
@@ -169,7 +197,7 @@ def launch_application(xpaths1, xpaths2, schools1, app_choice, driver, max_retri
                 # Wait before retrying
                 time.sleep(retry_delay)
             else:
-                print(f'Max retries reached for {schools1}. Giving up.')
+                logging.info(f'Max retries reached for {schools1}. Giving up.')
 
                 
 # -----------------------Download School Error Reports-----------------------------------
@@ -185,53 +213,84 @@ def download_school_error_reports(xpaths1, schools1, xpaths2, driver):
     submit_button = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.NAME, 'SUBMIT'))
     )
-    submit_button.click()
+    try:
+        submit_button.click()
+        logging.info('Clicked on submit')
+    except:
+        logging.info('Unable to click on submit button')
 
     #click on dynamic errors button
     dynamic_errors = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.LINK_TEXT, 'Dynamic Errors'))
     )
-    dynamic_errors.click()
+    try:
+        dynamic_errors.click()
+        logging.info('Clicked on dynamic errors')
+    except:
+        logging.info('Unable to click on dynamic errors')
 
     go_button = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/a/img'))
     )
-
-    go_button.click()
+    try:
+        go_button.click()
+        logging.info('Clicked on go button')
+    except:
+        logging.info('Unable to click on go button')
 
     # ----------------------------------------------------
 
     dropdown = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.NAME, 'locat'))
     )
-    dropdown.click()
+    try:
+        dropdown.click()
+        logging.info('Clicked on dropdown')
+    except:
+        logging.info('Unable to click on dropdown')
 
     School_Level_Errors = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/select/option[2]'))
     )
+    try:
+        School_Level_Errors.click()
+        logging.info('Unable to click on School Level Errors')
+    except:
+        logging.info('Clicked on school level errors')
 
-    School_Level_Errors.click()
 
     go_button = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr/td[2]/a/img'))
     )
 
-    go_button.click()
+    try:
+        go_button.click()
+        logging.info('Clicked on go button')
+    except:
+        logging.info('Unable to click on go button')
+
 
     # in next window now
 
     dropdown = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.NAME, 'select2'))
     )
-    dropdown.click()
+    try:
+        dropdown.click()
+        logging.info('Clicked on dropdown')
+    except:
+        logging.info('Unable to click on dropdown')
 
 
 
     Download_All_School_Errors = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/form/table/tbody/tr[2]/td[3]/select/option[2]'))
     )
-
-    Download_All_School_Errors.click()
+    try:
+        Download_All_School_Errors.click()
+        logging.info('Clicked on download all school errors')
+    except:
+        logging.info('Unable to click on download all school errors')
 
 
     #Got hung up HERE
@@ -243,9 +302,127 @@ def download_school_error_reports(xpaths1, schools1, xpaths2, driver):
         #download the file
         go_button.click()
         driver.close()   
-        logging.info(f'Downloaded {schools1} school error reports')
+        logging.warning(f'Downloaded {schools1} school error reports')
         
     except Exception as e:
-        logging.info(f'Failed to download {schools1} school error reports')
+        logging.warning(f'Failed to download {schools1} school error reports')
             
+    
+
+
+
+
+# ------------------Unique to EIS_adm_audit_membership--------------------
+# ------------------------div style changed has to do with dropdown loading before clicking on it---------------
+                
+def div_style_changed(driver):
+
+
+    div_locator = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'ctl00_MainContent_ReportViewer1_AsyncWait')))
+
+    style_attribute = div_locator.get_attribute("style")
+
+    output = style_attribute.split(";")[3].strip().split(':')[1].strip()
+
+    return(output == 'none')         
+
+
+    
+                
+
+
+def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
+
+    open_app_select_school(xpaths1, xpaths2, schools1, data_reports_image, driver)
+    launch_application(xpaths1, xpaths2, schools1, 'Data_Reports', driver, max_retries=4, retry_delay=5)
+    
+    #
+
+    adm_audit = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.ID, 'MainContent_HyperLink1'))
+    )
+    try:
+        adm_audit.click()
+        logging.info('ADM audit clicked')
+    except:
+        logging.info('Unable to click on adm audit')
+
+    #could not get this dropdown to work without a brief sleep
+    time.sleep(3)
+
+    dropdown = WebDriverWait(driver, 30).until(
+    EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
+    )
+    try:
+        dropdown.click()
+        logging.info('Clicked on dropdown')
+    except:
+        logging.info('Unable to click on dropdown')
+
+    file_download = WebDriverWait(driver, 30).until(
+    EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
+   )
+    
+    try:
+        file_download.click()
+        logging.info(f'Downloaded {schools1} adm audit')
+        
+    except Exception as e:
+        logging.info(f'Failed to download {schools1} adm audit')
+        
+    time.sleep(3)
+    
+    
+    #---------------------------------------get student membership------------------------------
+    
+    driver.back()
+
+    research_queries = WebDriverWait(driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="NavigationMenu"]/ul/li[4]/a'))
+    )
+    try:
+        research_queries.click()
+        logging.info('Clicked on research queries')
+    except:
+        logging.info('Unable to click on research queries')
+
+    student_membership = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="MainContent_HyperLink19"]'))
+    )
+    try:
+        student_membership.click()
+        logging.info('Student Membership clicked')
+    except:
+        logging.info('Unable to click on student membership')
+    
+    loaded = WebDriverWait(driver, 30).until(lambda d: div_style_changed(d))
+
+    if loaded == True:
+        logging.info('variable loaded')
+    else:
+        time.sleep(3)
+        logging.info('Issue with the variable loading on the dropdown')
+    
+    
+    dropdown = WebDriverWait(driver, 30).until(
+    EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
+    )
+    try:
+        dropdown.click()
+        logging.info('Dropdown clicked')
+    except:
+        logging.info('Issue with the dropdown not loading fast enough')
+
+    file_download = WebDriverWait(driver, 30).until(
+    EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
+    )
+    
+    try:
+        file_download.click()
+        logging.info(f'Downloaded {schools1} student membership')
+        
+    except Exception as e:
+        logging.info(f'Failed to download {schools1} student membership')
+        
+    driver.close()
     

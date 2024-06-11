@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -36,8 +32,8 @@ from config import username, password
 
 
 download_directory = os.path.join(os.getcwd(), 'outputs' , 'downloads')
-eis_file_errors_path = os.path.join(os.getcwd(), 'outputs', 'EIS_file_errors_downloads') #temp for my comp # eis_file_errors_path = r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_outputs\EIS File Errors'
-sftp_path = r'S:\SFTP\EIS'
+# sftp_path = r'S:\SFTP\EIS'
+sftp_path = r'C:\Users\samuel.taylor\OneDrive - Green Dot Public Schools\Desktop\temp'
 url = 'https://orion.tneducation.net'
 
 
@@ -53,8 +49,6 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 #Create and clean our directories prior to sending new data
 make_dir(download_directory)
 clean_dir(download_directory)
-make_dir(eis_file_errors_path)
-clean_dir(eis_file_errors_path)
 
 get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=4)
 
@@ -68,10 +62,5 @@ try:
 except Exception as e:
     logging.info(f'Unable to quit driver due to {e}')
 
-copy_directory(download_directory, eis_file_errors_path)
 
-
-# stack_files_send_to_SFTP(eis_file_errors_path, sftp_path)
-
-
-#Log out more in depth what is going in the prcoess. 
+stack_files_send_to_SFTP(download_directory, sftp_path, 'AllErr')

@@ -5,4 +5,4 @@ new_student_records.csv
 *.pyc
 *.csv
 *.json
-
+*downloads
