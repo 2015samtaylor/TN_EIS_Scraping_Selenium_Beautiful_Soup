@@ -1,34 +1,34 @@
+import sys
+import os
+
+current_dir = os.getcwd()
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+
 import pyodbc
+import pysftp
 import pandas as pd
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException
+from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
-import os
 import logging
 import re
 import numpy as np
-import urllib
-import sys
-
-# Add the parent directory to the Python path to get username, and password
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
+from modules.bigquery_ops import *
 from config import username, password
 
 
 logging.basicConfig(filename='EIS_enrollment_scrape.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
-
+logging.info('\n\n-------------EIS Cohort Tracking Scrape')
 
 # Specify the download directory
-download_directory = r"P:\Knowledge Management\State Reporting\TN\EIS\Exports\EIS\EIS File Errors"  
+download_directory = os.getcwd()  
 
 # Set up Chrome options
 chrome_options = webdriver.ChromeOptions()
@@ -36,20 +36,10 @@ prefs = {'download.default_directory' : download_directory,
          'profile.default_content_setting_values.automatic_downloads': 1,
          'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
 chrome_options.add_experimental_option('prefs', prefs)
-
-chrome_service = Service(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\ChromeDriver\chromedriver.exe')
-driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options = chrome_options)
 url = 'https://orion.tneducation.net/unauthorized'
 
 
-# -------------------------------Get Student Data to pass into the EIS---------------------------------------
-
-def SQL_query(query):
-    odbc_name = 'GD_DW'
-    conn = pyodbc.connect(f'DSN={odbc_name};')
-    df_SQL = pd.read_sql_query(query, con = conn)
-    return(df_SQL)
-    
 # -----------------------------------------------------
 
 def get_to_EIS_homepage():
@@ -96,21 +86,18 @@ def get_to_EIS_homepage():
 
         submit.click()
 
-         #click on EIS production image
-        span_element = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@id="orion-application"]/div[2]/tdoe-sidebar-layout/mat-sidenav-container/mat-sidenav-content/div/div[2]/article/app-orion-application-list/main/div/div/div[2]/app-orion-launch-card/mat-card/div'))
-        )
-
-
-        span_element.click()
-        
-
-        launch_app = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"]/span[text()="Launch Application"]'))
+        launch_app = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "img[src='/assets/img/applications/EISPROD.gif']"))
         )
 
         # Click on the span element
         launch_app.click()
+
+        launch_app_button = WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.XPATH, "//button[.//span[text()='Launch Application']]"))
+            )
+
+        launch_app_button.click()
         
         #---------------------
         
@@ -433,24 +420,36 @@ def SFTP_conn(sftp_pass, local_file_path, SFTP_folder_name):
 
 # --------------------
 
+# Bring in BQ view down to local sftp as csv, before passing in student data to the scrape
+# dict goes table_name: local_name
+naming_dict = {'students': 'students.csv'}
+
+query_template = """
+SELECT first_name, last_name, ssn, dob, gender, schoolentrydate FROM `{project_id}.{db}.{table_name}`
+WHERE schoolentrydate > '2020-08-01'
+ORDER BY schoolentrydate DESC
+"""
+
+#Pull down students from 
+replicate_BQ_views_to_local(r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_cohort_tracking_scrape', 
+                            project_id='powerschool-420113', 
+                            db= 'powerschool_combined',
+                            naming_dict=naming_dict,
+                            query_template=query_template)
+
+
+#read in local file coming from BQ
 get_to_EIS_homepage()
-
-# query = SQL_query(
-# '''
-# SELECT First_Name, Last_Name, SSN, DOB, Gender, SchoolEntryDate
-# FROM [PowerschoolStaged].[dbo].[vw_Rpt_TennStudents]
-# WHERE SchoolEntryDate > '2020/08/01'
-# ORDER BY SchoolEntryDate DESC
-# ''')
-
-#This temporarily becomes a csv. Long term must reference BQ table eventually. 
-query = pd.read_csv(r'C:\Users\samuel.taylor\Desktop\Python_Scripts\EIS\EIS_cohort_tracking_scrape\TN_students_05_30_24.csv')
+query = pd.read_csv(r'C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_cohort_tracking_scrape\students.csv')
 student_data = scrape_student_data(query)
 
+# #After Scrape turn into pandas frame
 frame = pd.DataFrame(student_data)
-frame = frame.applymap(replace_non_breaking_space)
-frame = clean_up(frame)
-frame.to_csv('EIS_prior_schools.csv', index =False)
+frame = frame.applymap(replace_non_breaking_space) #cleanse frame of '\xa0'
+frame = clean_up(frame) #frame cleansing continued
 
-
-SFTP_conn(SFTP_conn_pass, 'Entire_Scrape.csv',  'EIS_prior_schools')
+try:
+    frame.to_csv('S:\SFTP\powerschool_combined\EIS_prior_schools.csv', index =False)
+    logging.info(f'EIS_prior_schools file written to path {'S:\SFTP\powerschool_combined'}')
+except Exception as e:
+    logging.info(f'EIS_prior_schools unable to be written due to error {e}')

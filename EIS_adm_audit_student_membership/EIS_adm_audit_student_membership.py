@@ -31,8 +31,7 @@ logging.info('\n\n-------------EIS adm audit student membership log')
 
 
 download_directory = os.path.join(os.getcwd(), 'outputs' , 'downloads')
-# sftp_path = r'S:\SFTP\EIS'
-sftp_path = r'C:\Users\samuel.taylor\OneDrive - Green Dot Public Schools\Desktop\temp'
+sftp_path = r'S:\SFTP\EIS'
 url = 'https://orion.tneducation.net'
 
 # Set up Chrome options
