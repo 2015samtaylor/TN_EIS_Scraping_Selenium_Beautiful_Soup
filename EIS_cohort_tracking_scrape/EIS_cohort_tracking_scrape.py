@@ -4,6 +4,9 @@ import os
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(parent_dir)
+# Create logs directory if it doesn't exist
+log_dir = os.path.join(parent_dir, 'logs')
+os.makedirs(log_dir, exist_ok=True)
 
 import pyodbc
 import pysftp
@@ -22,10 +25,15 @@ import numpy as np
 from modules.bigquery_ops import *
 from config import username, password
 
+# Set up logging
+logging.basicConfig(filename=os.path.join(log_dir, 'EIS_cohort_tracking_scrape.log'),
+                    level=logging.INFO,
+                    format='%(asctime)s - %(message)s',
+                    datefmt='%d-%b-%y %H:%M:%S',
+                    force=True)
 
-logging.basicConfig(filename='EIS_enrollment_scrape.log', level=logging.INFO,
-                   format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
-logging.info('\n\n-------------EIS Cohort Tracking Scrape')
+logging.info('\n\n-------------EIS cohort tracking scrape log')
+
 
 # Specify the download directory
 download_directory = os.getcwd()  
@@ -44,7 +52,11 @@ url = 'https://orion.tneducation.net/unauthorized'
 
 def get_to_EIS_homepage():
     # Open the URL in the browser
-    driver.get(url)
+    try:
+        driver.get(url)
+        logging.info('Process has began, url requested')
+    except:
+        logging.info('Process unable to begin, url requeste unsuccesful')
 
     try:
         # Wait for the overlay to disappear
@@ -449,7 +461,7 @@ frame = frame.applymap(replace_non_breaking_space) #cleanse frame of '\xa0'
 frame = clean_up(frame) #frame cleansing continued
 
 try:
-    frame.to_csv('S:\SFTP\powerschool_combined\EIS_prior_schools.csv', index =False)
-    logging.info(f'EIS_prior_schools file written to path {'S:\SFTP\powerschool_combined'}')
+    frame.to_csv('S:\SFTP\EIS\EIS_prior_schools.csv', index =False)
+    logging.info(f'EIS_prior_schools file written to path {'S:\SFTP\EIS'}')
 except Exception as e:
     logging.info(f'EIS_prior_schools unable to be written due to error {e}')

@@ -1,0 +1,9 @@
+C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\modules\file_modifications.py:84: DtypeWarning: Columns (14,16,23,24,28) have mixed types. Specify dtype option on import or set low_memory=False.
+  df  = pd.read_csv(file_path, usecols=list(range(32))) #Must read in 32 columns, because the file adds in commas for any errors at the end of the file
+C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\modules\file_modifications.py:84: DtypeWarning: Columns (14,15,16,19,23,24,25,26,27,28) have mixed types. Specify dtype option on import or set low_memory=False.
+  df  = pd.read_csv(file_path, usecols=list(range(32))) #Must read in 32 columns, because the file adds in commas for any errors at the end of the file
+Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+No .crdownload or .tmp files found. Proceeding...
+C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads AllErr
+Stacking Sch8005AllErr.csv based on string match AllErr
+Stacking Sch8140AllErr.csv based on string match AllErr

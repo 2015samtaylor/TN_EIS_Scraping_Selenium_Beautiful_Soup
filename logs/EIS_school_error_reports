@@ -1,0 +1,825 @@
+20-Sep-24 10:37:26 - 
+
+-------------EIS school error reports log
+20-Sep-24 10:37:28 - ChromeDriver initialized successfully
+20-Sep-24 10:37:28 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 10:37:28 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 10:37:32 - Clicked login link
+20-Sep-24 10:37:34 - Username sent
+20-Sep-24 10:37:34 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 10:37:35 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 10:37:35 - Submitted username and password
+20-Sep-24 10:37:43 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 10:37:43 - Switched driver windows
+20-Sep-24 10:37:44 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:37:44 - Clicked on dropdown
+20-Sep-24 10:37:59 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:37:59 - First xpath did not work for school - BLF
+20-Sep-24 10:37:59 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 10:37:59 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 10:38:03 - Clicked on submit
+20-Sep-24 10:38:04 - Clicked on dynamic errors
+20-Sep-24 10:38:04 - Clicked on go button
+20-Sep-24 10:38:04 - Clicked on dropdown
+20-Sep-24 10:38:04 - Unable to click on School Level Errors
+20-Sep-24 10:38:05 - Clicked on go button
+20-Sep-24 10:38:05 - Clicked on dropdown
+20-Sep-24 10:38:05 - Clicked on download all school errors
+20-Sep-24 10:38:11 - Downloaded BLF school error reports
+20-Sep-24 10:38:11 - The application page is failing to load in 60 secs
+20-Sep-24 10:38:11 - Switched driver windows
+20-Sep-24 10:38:11 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:38:12 - Clicked on dropdown
+20-Sep-24 10:38:27 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:38:27 - First xpath did not work for school - HIL
+20-Sep-24 10:38:27 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 10:38:27 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 10:38:31 - Clicked on submit
+20-Sep-24 10:38:32 - Clicked on dynamic errors
+20-Sep-24 10:38:32 - Clicked on go button
+20-Sep-24 10:38:32 - Clicked on dropdown
+20-Sep-24 10:38:32 - Unable to click on School Level Errors
+20-Sep-24 10:38:33 - Clicked on go button
+20-Sep-24 10:38:33 - Clicked on dropdown
+20-Sep-24 10:38:33 - Clicked on download all school errors
+20-Sep-24 10:38:40 - Downloaded HIL school error reports
+20-Sep-24 10:38:40 - The application page is failing to load in 60 secs
+20-Sep-24 10:38:40 - Switched driver windows
+20-Sep-24 10:38:40 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:38:41 - Clicked on dropdown
+20-Sep-24 10:38:56 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:38:56 - First xpath did not work for school - WDL
+20-Sep-24 10:38:56 - Trying this xpath  SCH (Wooddale Middle School - Achievement School District) 
+20-Sep-24 10:57:28 - 
+
+-------------EIS school error reports log
+20-Sep-24 10:57:30 - ChromeDriver initialized successfully
+20-Sep-24 10:57:30 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 10:57:30 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 10:57:36 - Clicked login link
+20-Sep-24 10:57:38 - Username sent
+20-Sep-24 10:57:38 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 10:57:38 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 10:57:39 - Submitted username and password
+20-Sep-24 10:57:45 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 10:57:45 - Switched driver windows
+20-Sep-24 10:57:46 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:57:46 - Clicked on dropdown
+20-Sep-24 10:58:02 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:58:02 - First xpath did not work for school - BLF
+20-Sep-24 10:58:02 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 10:58:02 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 10:58:05 - Clicked on submit
+20-Sep-24 10:58:06 - Clicked on dynamic errors
+20-Sep-24 10:58:06 - Clicked on go button
+20-Sep-24 10:58:06 - Clicked on dropdown
+20-Sep-24 10:58:06 - Unable to click on School Level Errors
+20-Sep-24 10:58:07 - Clicked on go button
+20-Sep-24 10:58:07 - Clicked on dropdown
+20-Sep-24 10:58:07 - Clicked on download all school errors
+20-Sep-24 10:58:13 - Downloaded BLF school error reports
+20-Sep-24 10:58:13 - The application page is failing to load in 60 secs
+20-Sep-24 10:58:13 - Switched driver windows
+20-Sep-24 10:58:13 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:58:14 - Clicked on dropdown
+20-Sep-24 10:58:29 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:58:29 - First xpath did not work for school - HIL
+20-Sep-24 10:58:29 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 10:58:29 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 10:58:33 - Clicked on submit
+20-Sep-24 10:58:34 - Clicked on dynamic errors
+20-Sep-24 10:58:34 - Clicked on go button
+20-Sep-24 10:58:34 - Clicked on dropdown
+20-Sep-24 10:58:34 - Unable to click on School Level Errors
+20-Sep-24 10:58:35 - Clicked on go button
+20-Sep-24 10:58:35 - Clicked on dropdown
+20-Sep-24 10:58:35 - Clicked on download all school errors
+20-Sep-24 10:58:42 - Downloaded HIL school error reports
+20-Sep-24 10:58:42 - The application page is failing to load in 60 secs
+20-Sep-24 10:58:42 - Switched driver windows
+20-Sep-24 10:58:42 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 10:58:43 - Clicked on dropdown
+20-Sep-24 10:58:58 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF6976ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 10:58:58 - First xpath did not work for school - WDL
+20-Sep-24 10:58:58 - Trying this xpath  SCH (Wooddale Middle School - Achievement School District) 
+20-Sep-24 10:59:13 - Second xpath did not work for school - WDL
+20-Sep-24 10:59:14 - Unable to launch application due to {e}
+20-Sep-24 10:59:44 - Issue launching app for WDL
+20-Sep-24 11:00:33 - The application page is failing to load in 60 secs
+20-Sep-24 11:16:26 - 
+
+-------------EIS school error reports log
+20-Sep-24 11:16:28 - ChromeDriver initialized successfully
+20-Sep-24 11:16:28 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 11:16:28 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 11:16:33 - Clicked login link
+20-Sep-24 11:16:34 - Username sent
+20-Sep-24 11:16:34 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 11:16:35 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 11:16:35 - Submitted username and password
+20-Sep-24 11:16:57 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 11:16:57 - Switched driver windows
+20-Sep-24 11:16:58 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 11:16:58 - Clicked on dropdown
+20-Sep-24 11:17:13 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 11:17:13 - First xpath did not work for school - BLF
+20-Sep-24 11:17:13 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 11:17:13 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 11:17:18 - Clicked on submit
+20-Sep-24 11:17:18 - Clicked on dynamic errors
+20-Sep-24 11:17:18 - Clicked on go button
+20-Sep-24 11:17:18 - Clicked on dropdown
+20-Sep-24 11:17:19 - Unable to click on School Level Errors
+20-Sep-24 11:17:19 - Clicked on go button
+20-Sep-24 11:17:19 - Clicked on dropdown
+20-Sep-24 11:17:19 - Clicked on download all school errors
+20-Sep-24 11:17:25 - Downloaded BLF school error reports
+20-Sep-24 11:17:25 - The application page is failing to load in 60 secs
+20-Sep-24 11:17:25 - Switched driver windows
+20-Sep-24 11:17:25 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 11:17:26 - Clicked on dropdown
+20-Sep-24 11:17:41 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 11:17:41 - First xpath did not work for school - HIL
+20-Sep-24 11:17:41 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 11:17:41 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 11:17:45 - Clicked on submit
+20-Sep-24 11:17:46 - Clicked on dynamic errors
+20-Sep-24 11:17:46 - Clicked on go button
+20-Sep-24 11:17:46 - Clicked on dropdown
+20-Sep-24 11:17:46 - Unable to click on School Level Errors
+20-Sep-24 11:17:47 - Clicked on go button
+20-Sep-24 11:17:47 - Clicked on dropdown
+20-Sep-24 11:17:47 - Clicked on download all school errors
+20-Sep-24 11:17:54 - Downloaded HIL school error reports
+20-Sep-24 11:17:54 - The application page is failing to load in 60 secs
+20-Sep-24 11:17:54 - Switched driver windows
+20-Sep-24 11:17:54 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 11:17:55 - Clicked on dropdown
+20-Sep-24 11:18:10 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 11:18:10 - First xpath did not work for school - WDL
+20-Sep-24 11:18:10 - Trying this xpath  SCH (Wooddale Middle School - Achievement School District) 
+20-Sep-24 11:18:25 - Second xpath did not work for school - WDL
+20-Sep-24 11:18:26 - Unable to launch application due to Message: element click intercepted: Element <span class="mat-button-wrapper">...</span> is not clickable at point (593, 389). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=128.0.6613.139)
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DE6C0E]
+	(No symbol) [0x00007FF696DE4682]
+	(No symbol) [0x00007FF696DE1B9B]
+	(No symbol) [0x00007FF696DE0DB5]
+	(No symbol) [0x00007FF696DD2D61]
+	(No symbol) [0x00007FF696E066EA]
+	(No symbol) [0x00007FF696DD26A6]
+	(No symbol) [0x00007FF696E06900]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 14:25:06 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 14:25:06 - Switched driver windows
+20-Sep-24 14:25:07 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 14:25:07 - Clicked on dropdown
+20-Sep-24 16:06:55 - 
+
+-------------EIS school error reports log
+20-Sep-24 16:06:57 - ChromeDriver initialized successfully
+20-Sep-24 16:06:57 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 16:06:57 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 16:07:02 - Clicked login link
+20-Sep-24 16:07:03 - Username sent
+20-Sep-24 16:07:03 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 16:07:04 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 16:07:04 - Submitted username and password
+20-Sep-24 16:08:06 - The application page is failing to load in 60 secs
+20-Sep-24 16:08:06 - Switched driver windows
+20-Sep-24 16:08:08 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:08:08 - Clicked on dropdown
+20-Sep-24 16:08:23 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:08:23 - First xpath did not work for school - BLF
+20-Sep-24 16:08:23 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 16:08:23 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 16:08:27 - Clicked on submit
+20-Sep-24 16:08:27 - Clicked on dynamic errors
+20-Sep-24 16:08:27 - Clicked on go button
+20-Sep-24 16:08:27 - Clicked on dropdown
+20-Sep-24 16:08:27 - Unable to click on School Level Errors
+20-Sep-24 16:08:28 - Clicked on go button
+20-Sep-24 16:08:29 - Clicked on dropdown
+20-Sep-24 16:08:29 - Clicked on download all school errors
+20-Sep-24 16:08:35 - Downloaded BLF school error reports
+20-Sep-24 16:08:35 - The application page is failing to load in 60 secs
+20-Sep-24 16:08:35 - Switched driver windows
+20-Sep-24 16:08:35 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:08:36 - Clicked on dropdown
+20-Sep-24 16:08:51 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:08:51 - First xpath did not work for school - HIL
+20-Sep-24 16:08:51 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 16:08:51 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 16:08:54 - Clicked on submit
+20-Sep-24 16:08:55 - Clicked on dynamic errors
+20-Sep-24 16:08:55 - Clicked on go button
+20-Sep-24 16:08:55 - Clicked on dropdown
+20-Sep-24 16:08:55 - Unable to click on School Level Errors
+20-Sep-24 16:08:56 - Clicked on go button
+20-Sep-24 16:08:56 - Clicked on dropdown
+20-Sep-24 16:08:56 - Clicked on download all school errors
+20-Sep-24 16:09:03 - Downloaded HIL school error reports
+20-Sep-24 16:09:03 - The application page is failing to load in 60 secs
+20-Sep-24 16:09:03 - Switched driver windows
+20-Sep-24 16:09:04 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:09:04 - Clicked on dropdown
+20-Sep-24 16:09:19 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:09:19 - First xpath did not work for school - WDL
+20-Sep-24 16:09:19 - Trying this xpath  SCH (Wooddale Middle School - Achievement School District) 
+20-Sep-24 16:09:35 - Second xpath did not work for school - WDL
+20-Sep-24 16:09:36 - Unable to launch application due to Message: element click intercepted: Element <span class="mat-button-wrapper">...</span> is not clickable at point (593, 389). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=128.0.6613.139)
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DE6C0E]
+	(No symbol) [0x00007FF696DE4682]
+	(No symbol) [0x00007FF696DE1B9B]
+	(No symbol) [0x00007FF696DE0DB5]
+	(No symbol) [0x00007FF696DD2D61]
+	(No symbol) [0x00007FF696E066EA]
+	(No symbol) [0x00007FF696DD26A6]
+	(No symbol) [0x00007FF696E06900]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:10:06 - Issue launching app for WDL
+20-Sep-24 16:11:06 - The application page is failing to load in 60 secs
+20-Sep-24 16:11:06 - Switched driver windows
+20-Sep-24 16:11:37 - Failed to launch application for WDL due to: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:12:37 - The application page is failing to load in 60 secs
+20-Sep-24 16:12:37 - Switched driver windows
+20-Sep-24 16:12:39 - Failed to select school KRB due to: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.139)
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696D5FAF5]
+	(No symbol) [0x00007FF696E0E2E7]
+	(No symbol) [0x00007FF696E25EE1]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:12:39 - The application page is failing to load in 60 secs
+20-Sep-24 16:12:39 - Unable to switch driver windows due to {e}
+20-Sep-24 16:12:39 - Failed to select school FLY due to: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.139)
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696D5FAF5]
+	(No symbol) [0x00007FF696E0E2E7]
+	(No symbol) [0x00007FF696E25EE1]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:22:21 - 
+
+-------------EIS school error reports log
+20-Sep-24 16:22:23 - ChromeDriver initialized successfully
+20-Sep-24 16:22:23 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 16:22:23 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 16:22:29 - Clicked login link
+20-Sep-24 16:22:30 - Username sent
+20-Sep-24 16:22:30 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 16:22:31 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 16:22:31 - Submitted username and password
+20-Sep-24 16:22:40 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 16:22:40 - Switched driver windows
+20-Sep-24 16:22:41 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:22:41 - Clicked on dropdown
+20-Sep-24 16:22:52 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:22:52 - First xpath did not work for school - BLF
+20-Sep-24 16:22:52 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 16:22:52 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 16:22:56 - Clicked on submit
+20-Sep-24 16:22:56 - Clicked on dynamic errors
+20-Sep-24 16:22:56 - Clicked on go button
+20-Sep-24 16:22:57 - Clicked on dropdown
+20-Sep-24 16:22:57 - Unable to click on School Level Errors
+20-Sep-24 16:22:57 - Clicked on go button
+20-Sep-24 16:22:57 - Clicked on dropdown
+20-Sep-24 16:22:57 - Clicked on download all school errors
+20-Sep-24 16:23:03 - Downloaded BLF school error reports
+20-Sep-24 16:23:03 - The application page is failing to load in 60 secs
+20-Sep-24 16:23:03 - Switched driver windows
+20-Sep-24 16:23:03 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:23:04 - Clicked on dropdown
+20-Sep-24 16:23:15 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:23:15 - First xpath did not work for school - HIL
+20-Sep-24 16:23:15 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 16:23:15 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 16:23:18 - Clicked on submit
+20-Sep-24 16:23:19 - Clicked on dynamic errors
+20-Sep-24 16:23:19 - Clicked on go button
+20-Sep-24 16:23:19 - Clicked on dropdown
+20-Sep-24 16:23:19 - Unable to click on School Level Errors
+20-Sep-24 16:23:20 - Clicked on go button
+20-Sep-24 16:23:20 - Clicked on dropdown
+20-Sep-24 16:23:20 - Clicked on download all school errors
+20-Sep-24 16:23:27 - Downloaded HIL school error reports
+20-Sep-24 16:23:37 - No .crdownload or .tmp files found. Proceeding...
+20-Sep-24 16:23:39 - Quiting driver
+20-Sep-24 16:23:39 - Stacking Sch8005AllErr.csv based on string match AllErr
+20-Sep-24 16:23:40 - Stacking Sch8140AllErr.csv based on string match AllErr
+20-Sep-24 16:23:40 - AllErr being sent over with [8005 8140] schools
+20-Sep-24 16:23:42 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+20-Sep-24 16:24:24 - 
+
+-------------EIS school error reports log
+20-Sep-24 16:24:26 - ChromeDriver initialized successfully
+20-Sep-24 16:24:26 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads" created or already exists.
+20-Sep-24 16:24:26 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\downloads"
+20-Sep-24 16:24:34 - Clicked login link
+20-Sep-24 16:24:36 - Username sent
+20-Sep-24 16:24:36 - Submitted username as amy.hardy@tneducation.net
+20-Sep-24 16:24:37 - Sent password as TZ!5,s$CZg^9uPL
+20-Sep-24 16:24:37 - Submitted username and password
+20-Sep-24 16:24:54 - Image element has been located. Application page loaded in 60 secs
+20-Sep-24 16:24:54 - Switched driver windows
+20-Sep-24 16:24:55 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:24:56 - Clicked on dropdown
+20-Sep-24 16:25:06 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:25:06 - First xpath did not work for school - BLF
+20-Sep-24 16:25:06 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+20-Sep-24 16:25:06 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+20-Sep-24 16:25:11 - Clicked on submit
+20-Sep-24 16:25:11 - Clicked on dynamic errors
+20-Sep-24 16:25:11 - Clicked on go button
+20-Sep-24 16:25:12 - Clicked on dropdown
+20-Sep-24 16:25:12 - Unable to click on School Level Errors
+20-Sep-24 16:25:12 - Clicked on go button
+20-Sep-24 16:25:12 - Clicked on dropdown
+20-Sep-24 16:25:12 - Clicked on download all school errors
+20-Sep-24 16:25:18 - Downloaded BLF school error reports
+20-Sep-24 16:25:18 - The application page is failing to load in 60 secs
+20-Sep-24 16:25:18 - Switched driver windows
+20-Sep-24 16:25:18 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+20-Sep-24 16:25:19 - Clicked on dropdown
+20-Sep-24 16:25:30 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF696F5B632+29090]
+	(No symbol) [0x00007FF696ECE6E9]
+	(No symbol) [0x00007FF696D8B1CA]
+	(No symbol) [0x00007FF696DDEFD7]
+	(No symbol) [0x00007FF696DDF22C]
+	(No symbol) [0x00007FF696E297F7]
+	(No symbol) [0x00007FF696E0672F]
+	(No symbol) [0x00007FF696E265D9]
+	(No symbol) [0x00007FF696E06493]
+	(No symbol) [0x00007FF696DD09B1]
+	(No symbol) [0x00007FF696DD1B11]
+	GetHandleVerifier [0x00007FF69727881D+3294093]
+	GetHandleVerifier [0x00007FF6972C4403+3604339]
+	GetHandleVerifier [0x00007FF6972BA2C7+3563063]
+	GetHandleVerifier [0x00007FF697016F16+797318]
+	(No symbol) [0x00007FF696ED986F]
+	(No symbol) [0x00007FF696ED5454]
+	(No symbol) [0x00007FF696ED55E0]
+	(No symbol) [0x00007FF696EC4A7F]
+	(No symbol) [0x00007FFC85564CB0]
+	RtlUserThreadStart [0x00007FFC8631ECDB+43]
+
+20-Sep-24 16:25:30 - First xpath did not work for school - HIL
+20-Sep-24 16:25:30 - Trying this xpath  SCH (Hillcrest High School - Achievement School District) 
+20-Sep-24 16:25:30 - school_choice element HIL found and clickable through  School User (Hillcrest High School - Achievement School District) .
+20-Sep-24 16:25:33 - Clicked on submit
+20-Sep-24 16:25:34 - Clicked on dynamic errors
+20-Sep-24 16:25:34 - Clicked on go button
+20-Sep-24 16:25:34 - Clicked on dropdown
+20-Sep-24 16:25:34 - Unable to click on School Level Errors
+20-Sep-24 16:25:35 - Clicked on go button
+20-Sep-24 16:25:35 - Clicked on dropdown
+20-Sep-24 16:25:35 - Clicked on download all school errors
+20-Sep-24 16:25:42 - Downloaded HIL school error reports
+20-Sep-24 16:25:52 - No .crdownload or .tmp files found. Proceeding...
+20-Sep-24 16:25:54 - Quiting driver
+20-Sep-24 16:25:54 - Stacking Sch8005AllErr.csv based on string match AllErr
+20-Sep-24 16:25:55 - Stacking Sch8140AllErr.csv based on string match AllErr
+20-Sep-24 16:25:55 - AllErr being sent over with [8005 8140] schools
+20-Sep-24 16:25:58 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
