@@ -80,20 +80,43 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
             except:
                 logging.info('Unable to submit username and password')
 
-
-            # If we've reached this point without exceptions, the function has succeeded, can exit the while loop
-            return('Success')
+          
+            try:
+                # Wait up to 10 seconds for the 'passwordError' element to become visible
+                password_error_element = WebDriverWait(driver, 10).until(
+                    EC.visibility_of_element_located((By.ID, 'passwordError'))
+                )
+                
+                   # If found, extract the error message and handle the error
+                if password_error_element:
+                    error_message = password_error_element.text
+                    logging.error(f"Password error detected: {error_message}")
+                    break  # Break if the password error is detected
+                else:
+                    # If no error element is found, just pass and continue
+                    pass
+                
+            except Exception as e:
+                # If the element is not found within 10 seconds, handle the timeout
+                logging.info("No password error found, succesfully logged in.")
+                logging.info('Success')
+                success = True  # Set success to True since login was successful
+                break  # Exit loop as login was successful
 
         except Exception as e:
             print(f"An error occurred: {str(e)}")
             print("Retrying...")
             logging.info(f'An error occured: {e} retrying')
+            logging.info(f'Currently on try number {str(retries)}')
             retries += 1
             time.sleep(3)  # Add a delay before retrying
 
-    print(f"Max retries reached ({max_retries}). Function failed.")
-    logging.info(f'Max retries reached ({max_retries}). Function failed')
-    
+    if success:
+        logging.info('Login successful within retry attempts.')
+    else:
+        logging.info(f'Max retries reached ({max_retries}). Function failed.')
+        print(f"Max retries reached ({max_retries}). Function failed.")
+    return
 
 # -------------------------------------------Begin Downloads---------------------------------------------------------------
 data_reports_image = f"//img[@src='{'/assets/img/applications/EISREPORTING.gif'}']"

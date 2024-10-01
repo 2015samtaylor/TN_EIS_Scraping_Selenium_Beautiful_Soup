@@ -64,21 +64,43 @@ def copy_directory(source_dir, dest_dir):
         logging.warning('Unable to move {source_dir} to {dest_dir} due to \n {e}')
 
 
+#If the created dir for today has files then use it, otherwise roll back to most recent created dir. Log out all transactions
 
-
-def stack_files(dir, str_match):   #needs to include string matching.
-
+def stack_files(root_dir, str_match):  # root_dir now refers to the base directory where dated subdirs exist
     all_frames = []
-
-    print(dir, str_match)
-
-    for file in os.listdir(dir):
+    today = pd.Timestamp.today().normalize()
+    
+    # Get list of all subdirectories in root_dir
+    subdirs = [os.path.join(root_dir, d) for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))]
+    
+    # Try to find today's directory
+    today_dir = None
+    for subdir in subdirs:
+        logging.info(f'Here is the subdir {subdir}')
+        subdir_name = os.path.basename(subdir)
+        subdir_date = pd.to_datetime(subdir_name, errors='coerce').normalize()
+        
+        if subdir_date == today:
+            today_dir = subdir
+            break
+    
+    # If no directory for today is found, find the most recent one
+    if today_dir is None:
+        subdirs.sort(key=os.path.getmtime, reverse=True)  # Sort by modification time, newest first
+        today_dir = subdirs[0]  # Get the most recent directory
+        logging.warning(f'No files for today, rolling back to the most recent directory: {today_dir}')
+        print(f'No files for today, rolling back to the most recent directory: {today_dir}')
+    else:
+        logging.info(f'Using files from today\'s directory: {today_dir}')
+        print(f'Using files from today\'s directory: {today_dir}')
+        
+    for file in os.listdir(today_dir):
         if str_match in file:
 
             logging.warning(f'Stacking {file} based on string match {str_match}')
             print(f'Stacking {file} based on string match {str_match}')
 
-            file_path = os.path.join(dir, file)
+            file_path = os.path.join(today_dir, file)
     
             if str_match == 'AllErr':  #Subject to change
                 df  = pd.read_csv(file_path, usecols=list(range(32))) #Must read in 32 columns, because the file adds in commas for any errors at the end of the file
@@ -92,17 +114,12 @@ def stack_files(dir, str_match):   #needs to include string matching.
         else:
             logging.debug(f'Str match of {str_match} passed upon for file {file} in stacking files')
 
-
-    df = pd.concat(all_frames)
+    # Concatenate all DataFrames and clean up
+    df = pd.concat(all_frames, ignore_index=True)
     df = df.dropna(how='all')
-    today = pd.Timestamp.today().normalize()
     df['Last_Update'] = today
-
-    logging.info(f'{str_match} being sent over with {df['SCHOOL_NO'].unique()} schools')
-    return(df)
-
-
-
+    
+    return df
 
 
 def stack_files_send_to_SFTP(dir, sftp_path, str_match):
@@ -124,19 +141,22 @@ def stack_files_send_to_SFTP(dir, sftp_path, str_match):
 
 
 
-school_dict_1 =  {'BLF' : ' School User (Bluff City High School - Tennessee Public Charter School Commission) ',
-                    'HIL' : ' School User (Hillcrest High School - Achievement School District) '}
+school_dict_1 =  {'BLF' : ' School User (Bluff City High School - Tennessee Public Charter School Commission) '}
+                #   'ACH': ' SCH (ASD ESA School - Achievement School District) ' }
+                    # 'HIL' : ' School User (Hillcrest High School - Achievement School District) '
                     # 'WDL' : ' School User (Wooddale Middle School - Achievement School District) ',
                     # 'KRB' : ' School User (Kirby Middle School - Achievement School District) ',
                     # 'FLY' : ' School User (Fairley High School - Achievement School District) '}
 
 
-school_dict_2 =  {'BLF' : ' SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) ', #old one is the charter school comission
-                    'HIL' : ' SCH (Hillcrest High School - Achievement School District) '}
+school_dict_2 =  {'BLF' : ' SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) '} #old one is the charter school comission
+                #   'ACH': ' SCH_EC (ASD ESA School - Achievement School District) '}
+                    # 'HIL' : ' SCH (Hillcrest High School - Achievement School District) '}
                     # 'WDL' : ' SCH (Wooddale Middle School - Achievement School District) ',
                     # 'KRB' : ' SCH (Kirby Middle School - Achievement School District) ',
-                    # 'HIL' : ' SCH (Hillcrest High School - Achievement School District) ',
                     # 'FLY' : ' SCH (Fairley High School - Achievement School District) '}
+
+# <mat-option _ngcontent-fwe-c135="" role="option" class="mat-option mat-focus-indicator ng-tns-c124-19 ng-star-inserted" id="mat-option-12" tabindex="0" aria-disabled="false" style=""><!----><span class="mat-option-text"> SCH_EC (ASD ESA School - Achievement School District) </span><div mat-ripple="" class="mat-ripple mat-option-ripple"></div></mat-option>
 
 
 combined_dict = list(zip(school_dict_1.items(), school_dict_2.items()))

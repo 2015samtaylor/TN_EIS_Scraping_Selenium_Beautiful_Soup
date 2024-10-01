@@ -9,6 +9,9 @@ import logging
 from config import username, password
 from modules.selenium_process import *
 from modules.file_modifications import *
+from datetime import datetime
+current_date = datetime.now()
+date_string = current_date.strftime('%Y-%m-%d')
 
 # Create logs directory if it doesn't exist
 clear_logging_handlers()
@@ -22,7 +25,7 @@ logging.basicConfig(filename=os.path.normpath(os.path.join(log_dir, 'EIS_school_
 logging.info('\n\n-------------EIS school error reports log')
 
 
-download_directory = os.path.join(os.getcwd(), 'outputs' , 'downloads')
+download_directory = os.path.join(os.getcwd(), 'outputs' , date_string)
 sftp_path = r'S:\SFTP\EIS'
 url = 'https://orion.tneducation.net'
 
@@ -48,11 +51,10 @@ except Exception as e:
 
 
 #Create and clean our directories prior to sending new data
-make_dir(download_directory)
-clean_dir(download_directory)
+make_dir(download_directory) 
+clean_dir(download_directory) #If running multiple times in testing
 
 get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=4)
-
 for (schools1, xpaths1), (schools2, xpaths2) in combined_dict:
     download_school_error_reports(xpaths1, schools1, xpaths2, driver)
 
@@ -64,6 +66,7 @@ except Exception as e:
     logging.info(f'Unable to quit driver due to {e}')
 
 try:
-    stack_files_send_to_SFTP(download_directory, sftp_path, 'AllErr')
+    root_dir = os.path.dirname(download_directory)
+    stack_files_send_to_SFTP(root_dir, sftp_path, 'AllErr')
 except ValueError:
     logging.info('Files were not downloaded there is nothing to stack')
