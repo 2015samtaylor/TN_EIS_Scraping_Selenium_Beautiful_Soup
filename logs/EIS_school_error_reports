@@ -1881,3 +1881,1465 @@ Stacktrace:
 30-Sep-24 23:41:11 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
 30-Sep-24 23:41:16 - Issue launching app for BLF
 30-Sep-24 23:41:16 - Max retries reached for BLF. Giving up.
+01-Oct-24 07:35:04 - 
+
+-------------EIS school error reports log
+01-Oct-24 07:35:06 - ChromeDriver initialized successfully
+01-Oct-24 07:35:06 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01" created or already exists.
+01-Oct-24 07:35:06 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01"
+01-Oct-24 07:35:11 - Clicked login link
+01-Oct-24 07:35:12 - Username sent
+01-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+01-Oct-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+01-Oct-24 07:35:13 - Submitted username and password
+01-Oct-24 07:35:23 - No password error found, succesfully logged in.
+01-Oct-24 07:35:23 - Success
+01-Oct-24 07:35:23 - Login successful within retry attempts.
+01-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+01-Oct-24 07:35:23 - Switched driver windows
+01-Oct-24 07:35:24 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+01-Oct-24 07:35:24 - Clicked on dropdown
+01-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+01-Oct-24 07:35:34 - First xpath did not work for school - BLF
+01-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+01-Oct-24 07:35:35 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+01-Oct-24 07:35:38 - Clicked on submit
+01-Oct-24 07:35:38 - Clicked on dynamic errors
+01-Oct-24 07:35:39 - Clicked on go button
+01-Oct-24 07:35:39 - Clicked on dropdown
+01-Oct-24 07:35:39 - Unable to click on School Level Errors
+01-Oct-24 07:35:41 - Clicked on go button
+01-Oct-24 07:35:41 - Clicked on dropdown
+01-Oct-24 07:35:41 - Clicked on download all school errors
+01-Oct-24 07:35:48 - Downloaded BLF school error reports
+01-Oct-24 07:35:58 - No .crdownload or .tmp files found. Proceeding...
+01-Oct-24 07:36:01 - Quiting driver
+01-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+01-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+01-Oct-24 07:36:01 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+01-Oct-24 07:36:01 - Stacking Sch8005AllErr.csv based on string match AllErr
+01-Oct-24 07:36:02 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+02-Oct-24 07:35:04 - 
+
+-------------EIS school error reports log
+02-Oct-24 07:35:06 - ChromeDriver initialized successfully
+02-Oct-24 07:35:06 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02" created or already exists.
+02-Oct-24 07:35:06 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02"
+02-Oct-24 07:35:12 - Clicked login link
+02-Oct-24 07:35:12 - Username sent
+02-Oct-24 07:35:13 - Submitted username as amy.hardy@tneducation.net
+02-Oct-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+02-Oct-24 07:35:14 - Submitted username and password
+02-Oct-24 07:35:24 - No password error found, succesfully logged in.
+02-Oct-24 07:35:24 - Success
+02-Oct-24 07:35:24 - Login successful within retry attempts.
+02-Oct-24 07:35:24 - Image element has been located. Application page loaded in 60 secs
+02-Oct-24 07:35:24 - Switched driver windows
+02-Oct-24 07:35:24 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+02-Oct-24 07:35:24 - Clicked on dropdown
+02-Oct-24 07:35:35 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+02-Oct-24 07:35:35 - First xpath did not work for school - BLF
+02-Oct-24 07:35:35 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+02-Oct-24 07:35:35 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+02-Oct-24 07:35:39 - Clicked on submit
+02-Oct-24 07:35:39 - Clicked on dynamic errors
+02-Oct-24 07:35:39 - Clicked on go button
+02-Oct-24 07:35:39 - Clicked on dropdown
+02-Oct-24 07:35:40 - Unable to click on School Level Errors
+02-Oct-24 07:35:41 - Clicked on go button
+02-Oct-24 07:35:41 - Clicked on dropdown
+02-Oct-24 07:35:41 - Clicked on download all school errors
+02-Oct-24 07:35:47 - Downloaded BLF school error reports
+02-Oct-24 07:35:57 - No .crdownload or .tmp files found. Proceeding...
+02-Oct-24 07:36:00 - Quiting driver
+02-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+02-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+02-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+02-Oct-24 07:36:00 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+02-Oct-24 07:36:00 - Stacking Sch8005AllErr.csv based on string match AllErr
+02-Oct-24 07:36:01 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+03-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+03-Oct-24 07:35:05 - ChromeDriver initialized successfully
+03-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03" created or already exists.
+03-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03"
+03-Oct-24 07:35:10 - Clicked login link
+03-Oct-24 07:35:11 - Username sent
+03-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+03-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+03-Oct-24 07:35:12 - Submitted username and password
+03-Oct-24 07:35:23 - No password error found, succesfully logged in.
+03-Oct-24 07:35:23 - Success
+03-Oct-24 07:35:23 - Login successful within retry attempts.
+03-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+03-Oct-24 07:35:23 - Switched driver windows
+03-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+03-Oct-24 07:35:23 - Clicked on dropdown
+03-Oct-24 07:35:33 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+03-Oct-24 07:35:33 - First xpath did not work for school - BLF
+03-Oct-24 07:35:33 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+03-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+03-Oct-24 07:35:37 - Clicked on submit
+03-Oct-24 07:35:37 - Clicked on dynamic errors
+03-Oct-24 07:35:38 - Clicked on go button
+03-Oct-24 07:35:38 - Clicked on dropdown
+03-Oct-24 07:35:38 - Unable to click on School Level Errors
+03-Oct-24 07:35:40 - Clicked on go button
+03-Oct-24 07:35:40 - Clicked on dropdown
+03-Oct-24 07:35:40 - Clicked on download all school errors
+03-Oct-24 07:35:46 - Downloaded BLF school error reports
+03-Oct-24 07:35:56 - No .crdownload or .tmp files found. Proceeding...
+03-Oct-24 07:35:59 - Quiting driver
+03-Oct-24 07:35:59 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+03-Oct-24 07:35:59 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+03-Oct-24 07:35:59 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+03-Oct-24 07:35:59 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+03-Oct-24 07:35:59 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+03-Oct-24 07:35:59 - Stacking Sch8005AllErr.csv based on string match AllErr
+03-Oct-24 07:36:00 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+04-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+04-Oct-24 07:35:05 - ChromeDriver initialized successfully
+04-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04" created or already exists.
+04-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04"
+04-Oct-24 07:35:09 - Clicked login link
+04-Oct-24 07:35:11 - Username sent
+04-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+04-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+04-Oct-24 07:35:12 - Submitted username and password
+04-Oct-24 07:35:26 - No password error found, succesfully logged in.
+04-Oct-24 07:35:26 - Success
+04-Oct-24 07:35:26 - Login successful within retry attempts.
+04-Oct-24 07:35:26 - Image element has been located. Application page loaded in 60 secs
+04-Oct-24 07:35:26 - Switched driver windows
+04-Oct-24 07:35:27 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+04-Oct-24 07:35:27 - Clicked on dropdown
+04-Oct-24 07:35:38 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+04-Oct-24 07:35:38 - First xpath did not work for school - BLF
+04-Oct-24 07:35:38 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+04-Oct-24 07:35:38 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+04-Oct-24 07:35:42 - Clicked on submit
+04-Oct-24 07:35:42 - Clicked on dynamic errors
+04-Oct-24 07:35:42 - Clicked on go button
+04-Oct-24 07:35:42 - Clicked on dropdown
+04-Oct-24 07:35:43 - Unable to click on School Level Errors
+04-Oct-24 07:35:44 - Clicked on go button
+04-Oct-24 07:35:45 - Clicked on dropdown
+04-Oct-24 07:35:45 - Clicked on download all school errors
+04-Oct-24 07:35:52 - Downloaded BLF school error reports
+04-Oct-24 07:36:02 - No .crdownload or .tmp files found. Proceeding...
+04-Oct-24 07:36:05 - Quiting driver
+04-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+04-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+04-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+04-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+04-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+04-Oct-24 07:36:05 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+04-Oct-24 07:36:05 - Stacking Sch8005AllErr.csv based on string match AllErr
+04-Oct-24 07:36:06 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+07-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+07-Oct-24 07:35:04 - ChromeDriver initialized successfully
+07-Oct-24 07:35:04 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07" created or already exists.
+07-Oct-24 07:35:04 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07"
+07-Oct-24 07:35:10 - Clicked login link
+07-Oct-24 07:35:11 - Username sent
+07-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+07-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+07-Oct-24 07:35:12 - Submitted username and password
+07-Oct-24 07:35:23 - No password error found, succesfully logged in.
+07-Oct-24 07:35:23 - Success
+07-Oct-24 07:35:23 - Login successful within retry attempts.
+07-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+07-Oct-24 07:35:23 - Switched driver windows
+07-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+07-Oct-24 07:35:23 - Clicked on dropdown
+07-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+07-Oct-24 07:35:34 - First xpath did not work for school - BLF
+07-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+07-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+07-Oct-24 07:35:38 - Clicked on submit
+07-Oct-24 07:35:38 - Clicked on dynamic errors
+07-Oct-24 07:35:39 - Clicked on go button
+07-Oct-24 07:35:39 - Clicked on dropdown
+07-Oct-24 07:35:39 - Unable to click on School Level Errors
+07-Oct-24 07:35:42 - Clicked on go button
+07-Oct-24 07:35:42 - Clicked on dropdown
+07-Oct-24 07:35:42 - Clicked on download all school errors
+07-Oct-24 07:35:49 - Downloaded BLF school error reports
+07-Oct-24 07:35:59 - No .crdownload or .tmp files found. Proceeding...
+07-Oct-24 07:36:01 - Quiting driver
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+07-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+07-Oct-24 07:36:01 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+07-Oct-24 07:36:01 - Stacking Sch8005AllErr.csv based on string match AllErr
+07-Oct-24 07:36:02 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+08-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+08-Oct-24 07:35:05 - ChromeDriver initialized successfully
+08-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08" created or already exists.
+08-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08"
+08-Oct-24 07:35:09 - Clicked login link
+08-Oct-24 07:35:11 - Username sent
+08-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+08-Oct-24 07:35:11 - Sent password as j/Kv2f8]Wy^N@g
+08-Oct-24 07:35:12 - Submitted username and password
+08-Oct-24 07:35:22 - No password error found, succesfully logged in.
+08-Oct-24 07:35:22 - Success
+08-Oct-24 07:35:22 - Login successful within retry attempts.
+08-Oct-24 07:35:22 - Image element has been located. Application page loaded in 60 secs
+08-Oct-24 07:35:22 - Switched driver windows
+08-Oct-24 07:35:22 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+08-Oct-24 07:35:22 - Clicked on dropdown
+08-Oct-24 07:35:33 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+08-Oct-24 07:35:33 - First xpath did not work for school - BLF
+08-Oct-24 07:35:33 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+08-Oct-24 07:35:33 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+08-Oct-24 07:35:37 - Clicked on submit
+08-Oct-24 07:35:37 - Clicked on dynamic errors
+08-Oct-24 07:35:37 - Clicked on go button
+08-Oct-24 07:35:37 - Clicked on dropdown
+08-Oct-24 07:35:38 - Unable to click on School Level Errors
+08-Oct-24 07:35:39 - Clicked on go button
+08-Oct-24 07:35:39 - Clicked on dropdown
+08-Oct-24 07:35:39 - Clicked on download all school errors
+08-Oct-24 07:35:45 - Downloaded BLF school error reports
+08-Oct-24 07:35:55 - No .crdownload or .tmp files found. Proceeding...
+08-Oct-24 07:35:58 - Quiting driver
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+08-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+08-Oct-24 07:35:58 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+08-Oct-24 07:35:58 - Stacking Sch8005AllErr.csv based on string match AllErr
+08-Oct-24 07:35:59 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+09-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+09-Oct-24 07:35:05 - ChromeDriver initialized successfully
+09-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09" created or already exists.
+09-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09"
+09-Oct-24 07:35:09 - Clicked login link
+09-Oct-24 07:35:11 - Username sent
+09-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+09-Oct-24 07:35:11 - Sent password as j/Kv2f8]Wy^N@g
+09-Oct-24 07:35:12 - Submitted username and password
+09-Oct-24 07:35:22 - No password error found, succesfully logged in.
+09-Oct-24 07:35:22 - Success
+09-Oct-24 07:35:22 - Login successful within retry attempts.
+09-Oct-24 07:35:22 - Image element has been located. Application page loaded in 60 secs
+09-Oct-24 07:35:22 - Switched driver windows
+09-Oct-24 07:35:22 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+09-Oct-24 07:35:23 - Clicked on dropdown
+09-Oct-24 07:35:33 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+09-Oct-24 07:35:33 - First xpath did not work for school - BLF
+09-Oct-24 07:35:33 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+09-Oct-24 07:35:33 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+09-Oct-24 07:35:37 - Clicked on submit
+09-Oct-24 07:35:38 - Clicked on dynamic errors
+09-Oct-24 07:35:38 - Clicked on go button
+09-Oct-24 07:35:38 - Clicked on dropdown
+09-Oct-24 07:35:38 - Unable to click on School Level Errors
+09-Oct-24 07:35:40 - Clicked on go button
+09-Oct-24 07:35:40 - Clicked on dropdown
+09-Oct-24 07:35:40 - Clicked on download all school errors
+09-Oct-24 07:35:47 - Downloaded BLF school error reports
+09-Oct-24 07:35:57 - No .crdownload or .tmp files found. Proceeding...
+09-Oct-24 07:36:00 - Quiting driver
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+09-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+09-Oct-24 07:36:00 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+09-Oct-24 07:36:00 - Stacking Sch8005AllErr.csv based on string match AllErr
+09-Oct-24 07:36:01 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+10-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+10-Oct-24 07:35:05 - ChromeDriver initialized successfully
+10-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10" created or already exists.
+10-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10"
+10-Oct-24 07:35:10 - Clicked login link
+10-Oct-24 07:35:12 - Username sent
+10-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+10-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+10-Oct-24 07:35:13 - Submitted username and password
+10-Oct-24 07:35:23 - No password error found, succesfully logged in.
+10-Oct-24 07:35:23 - Success
+10-Oct-24 07:35:23 - Login successful within retry attempts.
+10-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+10-Oct-24 07:35:23 - Switched driver windows
+10-Oct-24 07:35:24 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+10-Oct-24 07:35:24 - Clicked on dropdown
+10-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+10-Oct-24 07:35:34 - First xpath did not work for school - BLF
+10-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+10-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+10-Oct-24 07:35:39 - Clicked on submit
+10-Oct-24 07:35:39 - Clicked on dynamic errors
+10-Oct-24 07:35:39 - Clicked on go button
+10-Oct-24 07:35:39 - Clicked on dropdown
+10-Oct-24 07:35:40 - Unable to click on School Level Errors
+10-Oct-24 07:35:41 - Clicked on go button
+10-Oct-24 07:35:41 - Clicked on dropdown
+10-Oct-24 07:35:41 - Clicked on download all school errors
+10-Oct-24 07:35:48 - Downloaded BLF school error reports
+10-Oct-24 07:35:58 - No .crdownload or .tmp files found. Proceeding...
+10-Oct-24 07:36:00 - Quiting driver
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+10-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+10-Oct-24 07:36:00 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+10-Oct-24 07:36:00 - Stacking Sch8005AllErr.csv based on string match AllErr
+10-Oct-24 07:36:02 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+11-Oct-24 07:35:04 - 
+
+-------------EIS school error reports log
+11-Oct-24 07:35:05 - ChromeDriver initialized successfully
+11-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11" created or already exists.
+11-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11"
+11-Oct-24 07:35:10 - Clicked login link
+11-Oct-24 07:35:11 - Username sent
+11-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+11-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+11-Oct-24 07:35:13 - Submitted username and password
+11-Oct-24 07:35:23 - No password error found, succesfully logged in.
+11-Oct-24 07:35:23 - Success
+11-Oct-24 07:35:23 - Login successful within retry attempts.
+11-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+11-Oct-24 07:35:23 - Switched driver windows
+11-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+11-Oct-24 07:35:23 - Clicked on dropdown
+11-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BC34B632+29090]
+	(No symbol) [0x00007FF7BC2BE6E9]
+	(No symbol) [0x00007FF7BC17B1CA]
+	(No symbol) [0x00007FF7BC1CEFD7]
+	(No symbol) [0x00007FF7BC1CF22C]
+	(No symbol) [0x00007FF7BC2197F7]
+	(No symbol) [0x00007FF7BC1F672F]
+	(No symbol) [0x00007FF7BC2165D9]
+	(No symbol) [0x00007FF7BC1F6493]
+	(No symbol) [0x00007FF7BC1C09B1]
+	(No symbol) [0x00007FF7BC1C1B11]
+	GetHandleVerifier [0x00007FF7BC66881D+3294093]
+	GetHandleVerifier [0x00007FF7BC6B4403+3604339]
+	GetHandleVerifier [0x00007FF7BC6AA2C7+3563063]
+	GetHandleVerifier [0x00007FF7BC406F16+797318]
+	(No symbol) [0x00007FF7BC2C986F]
+	(No symbol) [0x00007FF7BC2C5454]
+	(No symbol) [0x00007FF7BC2C55E0]
+	(No symbol) [0x00007FF7BC2B4A7F]
+	(No symbol) [0x00007FFADB5E4CB0]
+	RtlUserThreadStart [0x00007FFADC67ECDB+43]
+
+11-Oct-24 07:35:34 - First xpath did not work for school - BLF
+11-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+11-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+11-Oct-24 07:35:37 - Clicked on submit
+11-Oct-24 07:35:38 - Clicked on dynamic errors
+11-Oct-24 07:35:38 - Clicked on go button
+11-Oct-24 07:35:38 - Clicked on dropdown
+11-Oct-24 07:35:38 - Unable to click on School Level Errors
+11-Oct-24 07:35:39 - Clicked on go button
+11-Oct-24 07:35:39 - Clicked on dropdown
+11-Oct-24 07:35:39 - Clicked on download all school errors
+11-Oct-24 07:35:46 - Downloaded BLF school error reports
+11-Oct-24 07:35:56 - No .crdownload or .tmp files found. Proceeding...
+11-Oct-24 07:35:58 - Quiting driver
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+11-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+11-Oct-24 07:35:58 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+11-Oct-24 07:35:58 - Stacking Sch8005AllErr.csv based on string match AllErr
+11-Oct-24 07:35:59 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+17-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+17-Oct-24 07:35:05 - ChromeDriver initialized successfully
+17-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17" created or already exists.
+17-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17"
+17-Oct-24 07:35:10 - Clicked login link
+17-Oct-24 07:35:11 - Username sent
+17-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+17-Oct-24 07:35:11 - Sent password as j/Kv2f8]Wy^N@g
+17-Oct-24 07:35:12 - Submitted username and password
+17-Oct-24 07:35:24 - No password error found, succesfully logged in.
+17-Oct-24 07:35:24 - Success
+17-Oct-24 07:35:24 - Login successful within retry attempts.
+17-Oct-24 07:35:24 - Image element has been located. Application page loaded in 60 secs
+17-Oct-24 07:35:24 - Switched driver windows
+17-Oct-24 07:35:25 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+17-Oct-24 07:35:25 - Clicked on dropdown
+17-Oct-24 07:35:35 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+17-Oct-24 07:35:35 - First xpath did not work for school - BLF
+17-Oct-24 07:35:35 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+17-Oct-24 07:35:36 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+17-Oct-24 07:35:39 - Clicked on submit
+17-Oct-24 07:35:40 - Clicked on dynamic errors
+17-Oct-24 07:35:40 - Clicked on go button
+17-Oct-24 07:35:40 - Clicked on dropdown
+17-Oct-24 07:35:40 - Unable to click on School Level Errors
+17-Oct-24 07:35:41 - Clicked on go button
+17-Oct-24 07:35:41 - Clicked on dropdown
+17-Oct-24 07:35:41 - Clicked on download all school errors
+17-Oct-24 07:35:48 - Downloaded BLF school error reports
+17-Oct-24 07:35:58 - No .crdownload or .tmp files found. Proceeding...
+17-Oct-24 07:36:01 - Quiting driver
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+17-Oct-24 07:36:01 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+17-Oct-24 07:36:01 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+17-Oct-24 07:36:01 - Stacking Sch8005AllErr.csv based on string match AllErr
+17-Oct-24 07:36:02 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+18-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+18-Oct-24 07:35:05 - ChromeDriver initialized successfully
+18-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18" created or already exists.
+18-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18"
+18-Oct-24 07:35:15 - Clicked login link
+18-Oct-24 07:35:15 - Username sent
+18-Oct-24 07:35:16 - Submitted username as amy.hardy@tneducation.net
+18-Oct-24 07:35:16 - Sent password as j/Kv2f8]Wy^N@g
+18-Oct-24 07:35:17 - Submitted username and password
+18-Oct-24 07:35:27 - No password error found, succesfully logged in.
+18-Oct-24 07:35:27 - Success
+18-Oct-24 07:35:27 - Login successful within retry attempts.
+18-Oct-24 07:35:27 - Image element has been located. Application page loaded in 60 secs
+18-Oct-24 07:35:27 - Switched driver windows
+18-Oct-24 07:35:27 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+18-Oct-24 07:35:27 - Clicked on dropdown
+18-Oct-24 07:35:38 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+18-Oct-24 07:35:38 - First xpath did not work for school - BLF
+18-Oct-24 07:35:38 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+18-Oct-24 07:35:38 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+18-Oct-24 07:35:42 - Clicked on submit
+18-Oct-24 07:35:42 - Clicked on dynamic errors
+18-Oct-24 07:35:42 - Clicked on go button
+18-Oct-24 07:35:43 - Clicked on dropdown
+18-Oct-24 07:35:43 - Unable to click on School Level Errors
+18-Oct-24 07:35:44 - Clicked on go button
+18-Oct-24 07:35:44 - Clicked on dropdown
+18-Oct-24 07:35:44 - Clicked on download all school errors
+18-Oct-24 07:35:50 - Downloaded BLF school error reports
+18-Oct-24 07:36:00 - No .crdownload or .tmp files found. Proceeding...
+18-Oct-24 07:36:03 - Quiting driver
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+18-Oct-24 07:36:03 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+18-Oct-24 07:36:03 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+18-Oct-24 07:36:03 - Stacking Sch8005AllErr.csv based on string match AllErr
+18-Oct-24 07:36:05 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+21-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+21-Oct-24 07:35:05 - ChromeDriver initialized successfully
+21-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21" created or already exists.
+21-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21"
+21-Oct-24 07:35:10 - Clicked login link
+21-Oct-24 07:35:12 - Username sent
+21-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+21-Oct-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+21-Oct-24 07:35:13 - Submitted username and password
+21-Oct-24 07:35:23 - No password error found, succesfully logged in.
+21-Oct-24 07:35:23 - Success
+21-Oct-24 07:35:23 - Login successful within retry attempts.
+21-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+21-Oct-24 07:35:23 - Switched driver windows
+21-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+21-Oct-24 07:35:24 - Clicked on dropdown
+21-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+21-Oct-24 07:35:34 - First xpath did not work for school - BLF
+21-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+21-Oct-24 07:35:35 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+21-Oct-24 07:35:38 - Clicked on submit
+21-Oct-24 07:35:39 - Clicked on dynamic errors
+21-Oct-24 07:35:39 - Clicked on go button
+21-Oct-24 07:35:39 - Clicked on dropdown
+21-Oct-24 07:35:39 - Unable to click on School Level Errors
+21-Oct-24 07:35:41 - Clicked on go button
+21-Oct-24 07:35:42 - Clicked on dropdown
+21-Oct-24 07:35:42 - Clicked on download all school errors
+21-Oct-24 07:35:49 - Downloaded BLF school error reports
+21-Oct-24 07:35:59 - No .crdownload or .tmp files found. Proceeding...
+21-Oct-24 07:36:02 - Quiting driver
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+21-Oct-24 07:36:02 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+21-Oct-24 07:36:02 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+21-Oct-24 07:36:02 - Stacking Sch8005AllErr.csv based on string match AllErr
+21-Oct-24 07:36:04 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+22-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+22-Oct-24 07:35:05 - ChromeDriver initialized successfully
+22-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22" created or already exists.
+22-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22"
+22-Oct-24 07:35:11 - Clicked login link
+22-Oct-24 07:35:12 - Username sent
+22-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+22-Oct-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+22-Oct-24 07:35:14 - Submitted username and password
+22-Oct-24 07:35:30 - No password error found, succesfully logged in.
+22-Oct-24 07:35:30 - Success
+22-Oct-24 07:35:30 - Login successful within retry attempts.
+22-Oct-24 07:35:30 - Image element has been located. Application page loaded in 60 secs
+22-Oct-24 07:35:30 - Switched driver windows
+22-Oct-24 07:35:31 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+22-Oct-24 07:35:31 - Clicked on dropdown
+22-Oct-24 07:35:41 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+22-Oct-24 07:35:41 - First xpath did not work for school - BLF
+22-Oct-24 07:35:41 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+22-Oct-24 07:35:42 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+22-Oct-24 07:35:47 - Clicked on submit
+22-Oct-24 07:35:47 - Clicked on dynamic errors
+22-Oct-24 07:35:48 - Clicked on go button
+22-Oct-24 07:35:48 - Clicked on dropdown
+22-Oct-24 07:35:48 - Unable to click on School Level Errors
+22-Oct-24 07:35:50 - Clicked on go button
+22-Oct-24 07:35:50 - Clicked on dropdown
+22-Oct-24 07:35:50 - Clicked on download all school errors
+22-Oct-24 07:35:57 - Downloaded BLF school error reports
+22-Oct-24 07:36:07 - No .crdownload or .tmp files found. Proceeding...
+22-Oct-24 07:36:10 - Quiting driver
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+22-Oct-24 07:36:10 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+22-Oct-24 07:36:10 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+22-Oct-24 07:36:10 - Stacking Sch8005AllErr.csv based on string match AllErr
+22-Oct-24 07:36:11 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+23-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+23-Oct-24 07:35:05 - ChromeDriver initialized successfully
+23-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23" created or already exists.
+23-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23"
+23-Oct-24 07:35:09 - Clicked login link
+23-Oct-24 07:35:11 - Username sent
+23-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+23-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+23-Oct-24 07:35:17 - Submitted username and password
+23-Oct-24 07:35:27 - No password error found, succesfully logged in.
+23-Oct-24 07:35:27 - Success
+23-Oct-24 07:35:27 - Login successful within retry attempts.
+23-Oct-24 07:35:27 - Image element has been located. Application page loaded in 60 secs
+23-Oct-24 07:35:27 - Switched driver windows
+23-Oct-24 07:35:27 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+23-Oct-24 07:35:27 - Clicked on dropdown
+23-Oct-24 07:35:38 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+23-Oct-24 07:35:38 - First xpath did not work for school - BLF
+23-Oct-24 07:35:38 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+23-Oct-24 07:35:38 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+23-Oct-24 07:35:43 - Clicked on submit
+23-Oct-24 07:35:43 - Clicked on dynamic errors
+23-Oct-24 07:35:43 - Clicked on go button
+23-Oct-24 07:35:44 - Clicked on dropdown
+23-Oct-24 07:35:44 - Unable to click on School Level Errors
+23-Oct-24 07:35:45 - Clicked on go button
+23-Oct-24 07:35:46 - Clicked on dropdown
+23-Oct-24 07:35:46 - Clicked on download all school errors
+23-Oct-24 07:35:53 - Downloaded BLF school error reports
+23-Oct-24 07:36:03 - No .crdownload or .tmp files found. Proceeding...
+23-Oct-24 07:36:05 - Quiting driver
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+23-Oct-24 07:36:05 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+23-Oct-24 07:36:05 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+23-Oct-24 07:36:05 - Stacking Sch8005AllErr.csv based on string match AllErr
+23-Oct-24 07:36:07 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+24-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+24-Oct-24 07:35:05 - ChromeDriver initialized successfully
+24-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24" created or already exists.
+24-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24"
+24-Oct-24 07:35:10 - Clicked login link
+24-Oct-24 07:35:11 - Username sent
+24-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+24-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+24-Oct-24 07:35:13 - Submitted username and password
+24-Oct-24 07:35:23 - No password error found, succesfully logged in.
+24-Oct-24 07:35:23 - Success
+24-Oct-24 07:35:23 - Login successful within retry attempts.
+24-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+24-Oct-24 07:35:23 - Switched driver windows
+24-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+24-Oct-24 07:35:23 - Clicked on dropdown
+24-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+24-Oct-24 07:35:34 - First xpath did not work for school - BLF
+24-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+24-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+24-Oct-24 07:35:38 - Clicked on submit
+24-Oct-24 07:35:38 - Clicked on dynamic errors
+24-Oct-24 07:35:39 - Clicked on go button
+24-Oct-24 07:35:39 - Clicked on dropdown
+24-Oct-24 07:35:39 - Unable to click on School Level Errors
+24-Oct-24 07:35:40 - Clicked on go button
+24-Oct-24 07:35:40 - Clicked on dropdown
+24-Oct-24 07:35:40 - Clicked on download all school errors
+24-Oct-24 07:35:48 - Downloaded BLF school error reports
+24-Oct-24 07:35:58 - No .crdownload or .tmp files found. Proceeding...
+24-Oct-24 07:36:00 - Quiting driver
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+24-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+24-Oct-24 07:36:00 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+24-Oct-24 07:36:00 - Stacking Sch8005AllErr.csv based on string match AllErr
+24-Oct-24 07:36:02 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+25-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+25-Oct-24 07:35:04 - ChromeDriver initialized successfully
+25-Oct-24 07:35:04 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25" created or already exists.
+25-Oct-24 07:35:04 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25"
+25-Oct-24 07:35:09 - Clicked login link
+25-Oct-24 07:35:10 - Username sent
+25-Oct-24 07:35:10 - Submitted username as amy.hardy@tneducation.net
+25-Oct-24 07:35:11 - Sent password as j/Kv2f8]Wy^N@g
+25-Oct-24 07:35:11 - Submitted username and password
+25-Oct-24 07:35:22 - No password error found, succesfully logged in.
+25-Oct-24 07:35:22 - Success
+25-Oct-24 07:35:22 - Login successful within retry attempts.
+25-Oct-24 07:35:22 - Image element has been located. Application page loaded in 60 secs
+25-Oct-24 07:35:22 - Switched driver windows
+25-Oct-24 07:35:22 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+25-Oct-24 07:35:22 - Clicked on dropdown
+25-Oct-24 07:35:33 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+25-Oct-24 07:35:33 - First xpath did not work for school - BLF
+25-Oct-24 07:35:33 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+25-Oct-24 07:35:33 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+25-Oct-24 07:35:37 - Clicked on submit
+25-Oct-24 07:35:37 - Clicked on dynamic errors
+25-Oct-24 07:35:37 - Clicked on go button
+25-Oct-24 07:35:38 - Clicked on dropdown
+25-Oct-24 07:35:38 - Unable to click on School Level Errors
+25-Oct-24 07:35:39 - Clicked on go button
+25-Oct-24 07:35:39 - Clicked on dropdown
+25-Oct-24 07:35:39 - Clicked on download all school errors
+25-Oct-24 07:35:46 - Downloaded BLF school error reports
+25-Oct-24 07:35:56 - No .crdownload or .tmp files found. Proceeding...
+25-Oct-24 07:35:58 - Quiting driver
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+25-Oct-24 07:35:58 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+25-Oct-24 07:35:58 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+25-Oct-24 07:35:58 - Stacking Sch8005AllErr.csv based on string match AllErr
+25-Oct-24 07:35:59 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+28-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+28-Oct-24 07:35:05 - ChromeDriver initialized successfully
+28-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28" created or already exists.
+28-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28"
+28-Oct-24 07:35:10 - Clicked login link
+28-Oct-24 07:35:11 - Username sent
+28-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+28-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+28-Oct-24 07:35:12 - Submitted username and password
+28-Oct-24 07:35:23 - No password error found, succesfully logged in.
+28-Oct-24 07:35:23 - Success
+28-Oct-24 07:35:23 - Login successful within retry attempts.
+28-Oct-24 07:35:23 - Image element has been located. Application page loaded in 60 secs
+28-Oct-24 07:35:23 - Switched driver windows
+28-Oct-24 07:35:23 - Clicked on //img[@src='/assets/img/applications/EISPROD.gif']
+28-Oct-24 07:35:24 - Clicked on dropdown
+28-Oct-24 07:35:34 - Exception caught. school_choice element unable to be clicked upon due to Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E55EFD7]
+	(No symbol) [0x00007FF61E55F22C]
+	(No symbol) [0x00007FF61E5A97F7]
+	(No symbol) [0x00007FF61E58672F]
+	(No symbol) [0x00007FF61E5A65D9]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+28-Oct-24 07:35:34 - First xpath did not work for school - BLF
+28-Oct-24 07:35:34 - Trying this xpath  SCH_EC (Bluff City High School - Tennessee Public Charter School Commission) 
+28-Oct-24 07:35:34 - school_choice element BLF found and clickable through  School User (Bluff City High School - Tennessee Public Charter School Commission) .
+28-Oct-24 07:35:38 - Clicked on submit
+28-Oct-24 07:35:39 - Clicked on dynamic errors
+28-Oct-24 07:35:39 - Clicked on go button
+28-Oct-24 07:35:39 - Clicked on dropdown
+28-Oct-24 07:35:39 - Unable to click on School Level Errors
+28-Oct-24 07:35:40 - Clicked on go button
+28-Oct-24 07:35:41 - Clicked on dropdown
+28-Oct-24 07:35:41 - Clicked on download all school errors
+28-Oct-24 07:35:47 - Downloaded BLF school error reports
+28-Oct-24 07:35:57 - No .crdownload or .tmp files found. Proceeding...
+28-Oct-24 07:36:00 - Quiting driver
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+28-Oct-24 07:36:00 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+28-Oct-24 07:36:00 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+28-Oct-24 07:36:00 - Stacking Sch8005AllErr.csv based on string match AllErr
+28-Oct-24 07:36:01 - Sending stacked csv to S:\SFTP\EIS\AllErr_stack.csv
+29-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+29-Oct-24 07:35:07 - Error initializing ChromeDriver: Message: session not created: This version of ChromeDriver only supports Chrome version 128
+Current browser version is 130.0.6723.70 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF61E6DB632+29090]
+	(No symbol) [0x00007FF61E64E6E9]
+	(No symbol) [0x00007FF61E50B1CA]
+	(No symbol) [0x00007FF61E54D6B2]
+	(No symbol) [0x00007FF61E54C751]
+	(No symbol) [0x00007FF61E54729C]
+	(No symbol) [0x00007FF61E541E0A]
+	(No symbol) [0x00007FF61E59236D]
+	(No symbol) [0x00007FF61E591A20]
+	(No symbol) [0x00007FF61E586493]
+	(No symbol) [0x00007FF61E5509B1]
+	(No symbol) [0x00007FF61E551B11]
+	GetHandleVerifier [0x00007FF61E9F881D+3294093]
+	GetHandleVerifier [0x00007FF61EA44403+3604339]
+	GetHandleVerifier [0x00007FF61EA3A2C7+3563063]
+	GetHandleVerifier [0x00007FF61E796F16+797318]
+	(No symbol) [0x00007FF61E65986F]
+	(No symbol) [0x00007FF61E655454]
+	(No symbol) [0x00007FF61E6555E0]
+	(No symbol) [0x00007FF61E644A7F]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+29-Oct-24 07:35:07 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29" created or already exists.
+29-Oct-24 07:35:07 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29"
+29-Oct-24 22:50:09 - 
+
+-------------EIS school error reports log
+29-Oct-24 22:50:11 - ChromeDriver initialized successfully
+29-Oct-24 22:50:11 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29" created or already exists.
+29-Oct-24 22:50:11 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29"
+29-Oct-24 22:50:16 - Clicked login link
+29-Oct-24 22:50:17 - Username sent
+29-Oct-24 22:50:17 - Submitted username as amy.hardy@tneducation.net
+29-Oct-24 22:50:18 - Sent password as j/Kv2f8]Wy^N@g
+29-Oct-24 22:50:18 - Submitted username and password
+29-Oct-24 22:50:36 - No password error found, succesfully logged in.
+29-Oct-24 22:50:36 - Success
+29-Oct-24 22:50:36 - Login successful within retry attempts.
+29-Oct-24 22:51:36 - The application page is failing to load in 60 secs
+29-Oct-24 22:51:36 - Switched driver windows
+29-Oct-24 22:52:06 - Failed to select school BLF due to: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698083AF5+28005]
+	(No symbol) [0x00007FF697FE83F0]
+	(No symbol) [0x00007FF697E8580A]
+	(No symbol) [0x00007FF697ED5A3E]
+	(No symbol) [0x00007FF697ED5D2C]
+	(No symbol) [0x00007FF697F1EA97]
+	(No symbol) [0x00007FF697EFBA7F]
+	(No symbol) [0x00007FF697F1B8B3]
+	(No symbol) [0x00007FF697EFB7E3]
+	(No symbol) [0x00007FF697EC75C8]
+	(No symbol) [0x00007FF697EC8731]
+	GetHandleVerifier [0x00007FF69837646D+3118813]
+	GetHandleVerifier [0x00007FF6983C6CC0+3448624]
+	GetHandleVerifier [0x00007FF6983BCF3D+3408301]
+	GetHandleVerifier [0x00007FF69814A44B+841403]
+	(No symbol) [0x00007FF697FF344F]
+	(No symbol) [0x00007FF697FEF4C4]
+	(No symbol) [0x00007FF697FEF65D]
+	(No symbol) [0x00007FF697FDEBB9]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+29-Oct-24 22:52:16 - No .crdownload or .tmp files found. Proceeding...
+29-Oct-24 22:52:19 - Quiting driver
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+29-Oct-24 22:52:19 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29
+29-Oct-24 22:52:19 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29
+29-Oct-24 22:52:19 - Files were not downloaded there is nothing to stack
+30-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+30-Oct-24 07:35:05 - ChromeDriver initialized successfully
+30-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30" created or already exists.
+30-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30"
+30-Oct-24 07:35:10 - Clicked login link
+30-Oct-24 07:35:12 - Username sent
+30-Oct-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+30-Oct-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+30-Oct-24 07:35:13 - Submitted username and password
+30-Oct-24 07:35:23 - No password error found, succesfully logged in.
+30-Oct-24 07:35:23 - Success
+30-Oct-24 07:35:23 - Login successful within retry attempts.
+30-Oct-24 07:36:23 - The application page is failing to load in 60 secs
+30-Oct-24 07:36:23 - Switched driver windows
+30-Oct-24 07:36:54 - Failed to select school BLF due to: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698083AF5+28005]
+	(No symbol) [0x00007FF697FE83F0]
+	(No symbol) [0x00007FF697E8580A]
+	(No symbol) [0x00007FF697ED5A3E]
+	(No symbol) [0x00007FF697ED5D2C]
+	(No symbol) [0x00007FF697F1EA97]
+	(No symbol) [0x00007FF697EFBA7F]
+	(No symbol) [0x00007FF697F1B8B3]
+	(No symbol) [0x00007FF697EFB7E3]
+	(No symbol) [0x00007FF697EC75C8]
+	(No symbol) [0x00007FF697EC8731]
+	GetHandleVerifier [0x00007FF69837646D+3118813]
+	GetHandleVerifier [0x00007FF6983C6CC0+3448624]
+	GetHandleVerifier [0x00007FF6983BCF3D+3408301]
+	GetHandleVerifier [0x00007FF69814A44B+841403]
+	(No symbol) [0x00007FF697FF344F]
+	(No symbol) [0x00007FF697FEF4C4]
+	(No symbol) [0x00007FF697FEF65D]
+	(No symbol) [0x00007FF697FDEBB9]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+30-Oct-24 07:37:04 - No .crdownload or .tmp files found. Proceeding...
+30-Oct-24 07:37:06 - Quiting driver
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29
+30-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30
+30-Oct-24 07:37:06 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30
+30-Oct-24 07:37:06 - Files were not downloaded there is nothing to stack
+31-Oct-24 07:35:03 - 
+
+-------------EIS school error reports log
+31-Oct-24 07:35:05 - ChromeDriver initialized successfully
+31-Oct-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-31" created or already exists.
+31-Oct-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-31"
+31-Oct-24 07:35:10 - Clicked login link
+31-Oct-24 07:35:11 - Username sent
+31-Oct-24 07:35:11 - Submitted username as amy.hardy@tneducation.net
+31-Oct-24 07:35:12 - Sent password as j/Kv2f8]Wy^N@g
+31-Oct-24 07:35:12 - Submitted username and password
+31-Oct-24 07:35:23 - No password error found, succesfully logged in.
+31-Oct-24 07:35:23 - Success
+31-Oct-24 07:35:23 - Login successful within retry attempts.
+31-Oct-24 07:36:23 - The application page is failing to load in 60 secs
+31-Oct-24 07:36:23 - Switched driver windows
+31-Oct-24 07:36:53 - Failed to select school BLF due to: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698083AF5+28005]
+	(No symbol) [0x00007FF697FE83F0]
+	(No symbol) [0x00007FF697E8580A]
+	(No symbol) [0x00007FF697ED5A3E]
+	(No symbol) [0x00007FF697ED5D2C]
+	(No symbol) [0x00007FF697F1EA97]
+	(No symbol) [0x00007FF697EFBA7F]
+	(No symbol) [0x00007FF697F1B8B3]
+	(No symbol) [0x00007FF697EFB7E3]
+	(No symbol) [0x00007FF697EC75C8]
+	(No symbol) [0x00007FF697EC8731]
+	GetHandleVerifier [0x00007FF69837646D+3118813]
+	GetHandleVerifier [0x00007FF6983C6CC0+3448624]
+	GetHandleVerifier [0x00007FF6983BCF3D+3408301]
+	GetHandleVerifier [0x00007FF69814A44B+841403]
+	(No symbol) [0x00007FF697FF344F]
+	(No symbol) [0x00007FF697FEF4C4]
+	(No symbol) [0x00007FF697FEF65D]
+	(No symbol) [0x00007FF697FDEBB9]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+31-Oct-24 07:37:03 - No .crdownload or .tmp files found. Proceeding...
+31-Oct-24 07:37:06 - Quiting driver
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30
+31-Oct-24 07:37:06 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-31
+31-Oct-24 07:37:06 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-31
+31-Oct-24 07:37:06 - Files were not downloaded there is nothing to stack
+01-Nov-24 07:35:03 - 
+
+-------------EIS school error reports log
+01-Nov-24 07:35:05 - ChromeDriver initialized successfully
+01-Nov-24 07:35:05 - Directory "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-11-01" created or already exists.
+01-Nov-24 07:35:05 - Cleaning out dir "C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-11-01"
+01-Nov-24 07:35:10 - Clicked login link
+01-Nov-24 07:35:12 - Username sent
+01-Nov-24 07:35:12 - Submitted username as amy.hardy@tneducation.net
+01-Nov-24 07:35:13 - Sent password as j/Kv2f8]Wy^N@g
+01-Nov-24 07:35:13 - Submitted username and password
+01-Nov-24 07:35:24 - No password error found, succesfully logged in.
+01-Nov-24 07:35:24 - Success
+01-Nov-24 07:35:24 - Login successful within retry attempts.
+01-Nov-24 07:36:24 - The application page is failing to load in 60 secs
+01-Nov-24 07:36:24 - Switched driver windows
+01-Nov-24 07:36:54 - Failed to select school BLF due to: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698083AF5+28005]
+	(No symbol) [0x00007FF697FE83F0]
+	(No symbol) [0x00007FF697E8580A]
+	(No symbol) [0x00007FF697ED5A3E]
+	(No symbol) [0x00007FF697ED5D2C]
+	(No symbol) [0x00007FF697F1EA97]
+	(No symbol) [0x00007FF697EFBA7F]
+	(No symbol) [0x00007FF697F1B8B3]
+	(No symbol) [0x00007FF697EFB7E3]
+	(No symbol) [0x00007FF697EC75C8]
+	(No symbol) [0x00007FF697EC8731]
+	GetHandleVerifier [0x00007FF69837646D+3118813]
+	GetHandleVerifier [0x00007FF6983C6CC0+3448624]
+	GetHandleVerifier [0x00007FF6983BCF3D+3408301]
+	GetHandleVerifier [0x00007FF69814A44B+841403]
+	(No symbol) [0x00007FF697FF344F]
+	(No symbol) [0x00007FF697FEF4C4]
+	(No symbol) [0x00007FF697FEF65D]
+	(No symbol) [0x00007FF697FDEBB9]
+	(No symbol) [0x00007FF978894CB0]
+	RtlUserThreadStart [0x00007FF9799BECDB+43]
+
+01-Nov-24 07:37:04 - No .crdownload or .tmp files found. Proceeding...
+01-Nov-24 07:37:07 - Quiting driver
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-09-30
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-01
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-02
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-03
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-04
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-07
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-08
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-09
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-10
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-11
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-17
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-18
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-21
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-22
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-23
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-24
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-25
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-28
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-29
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-30
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-10-31
+01-Nov-24 07:37:07 - Here is the subdir C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-11-01
+01-Nov-24 07:37:07 - Using files from today's directory: C:\Users\amy.hardy\Desktop\Python_Scripts\EIS_Selenium\EIS_school_error_reports\outputs\2024-11-01
+01-Nov-24 07:37:07 - Files were not downloaded there is nothing to stack

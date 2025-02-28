@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException, ElementClickInterceptedException, WebDriverException
-
+from selenium.webdriver.support.ui import Select
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
 
@@ -95,6 +95,7 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
                 else:
                     # If no error element is found, just pass and continue
                     pass
+                success=False
                 
             except Exception as e:
                 # If the element is not found within 10 seconds, handle the timeout
@@ -175,7 +176,7 @@ def open_app_select_school(xpaths1, xpaths2, schools1, app_xpath, driver):
 
     except Exception as e:
         logging.info(f'Exception caught. school_choice element unable to be clicked upon due to {e}')
-        logging.info(f"First xpath did not work for school - {schools1}")
+        logging.info(f"First xpath did not work for school - {schools1} as {xpaths1}")
         logging.info(f'Trying this xpath {xpaths2}')
 
         first_xpath_success=False
@@ -465,27 +466,63 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
     else:
         time.sleep(3)
         logging.info('Issue with the variable loading on the dropdown')
+
+
+    # Click on the dropdown element
+    dropdown_element = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable((By.ID, "ctl00_MainContent_ReportViewer1_ctl04_ctl05_ddValue"))
+    )
+    try:
+        dropdown_element.click()
+        logging.info('Dropdown clicked')
+    except:
+        logging.info('Unable to click on dropdown')
+
+    # Select the option with value "1"
+    try:
+        select = Select(dropdown_element)
+        select.select_by_value("1")
+        logging.info('Selected option "- All Schools -"')
+    except:
+        logging.info('Unable to select option "- All Schools -"')
+
+
+    #If it is a Student Membership must view the report first
+    # Click on the "View Report" button using the value attribute
+    view_report_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//input[@value='View Report']"))
+    )
+    try:
+        view_report_button.click()
+        logging.info('Clicked on View Report button')
+    except:
+        logging.info('Unable to click on View Report button')
     
     
+    #could not get this dropdown to work without a brief sleep
+    time.sleep(30)
+    #Need something dynamic to rexognize when the spinner dissapears
+    #This is a temporary fix
+
     dropdown = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
     )
     try:
         dropdown.click()
-        logging.info('Dropdown clicked')
+        logging.info('Clicked on dropdown')
     except:
-        logging.info('Issue with the dropdown not loading fast enough')
+        logging.info('Unable to click on dropdown')
 
     file_download = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
-    )
+   )
     
     try:
         file_download.click()
-        logging.info(f'Downloaded {schools1} student membership')
+        logging.info(f'Downloaded {schools1} Student Membership')
         
     except Exception as e:
-        logging.info(f'Failed to download {schools1} student membership')
+        logging.info(f'Failed to download {schools1} Student Membership')
         
-    driver.close()
+    driver.close() #close current window
     
