@@ -9,8 +9,25 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException, ElementClickInterceptedException, WebDriverException
 from selenium.webdriver.support.ui import Select
+from .file_modifications import wait_for_cr_files
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
+
+def wait_for_loading_to_finish(driver, timeout=60):
+    try:
+        # Wait for the loading element to become visible (indicating the page is loading)
+        WebDriverWait(driver, timeout).until(
+            EC.visibility_of_element_located((By.ID, "ctl00_MainContent_ReportViewer1_AsyncWait"))
+        )
+        logging.info("Loading started...")
+
+        # Wait for the loading element to become invisible (indicating the page has finished loading)
+        WebDriverWait(driver, timeout).until(
+            EC.invisibility_of_element_located((By.ID, "ctl00_MainContent_ReportViewer1_AsyncWait"))
+        )
+        logging.info("Loading finished, proceeding with the next step.")
+    except Exception as e:
+        logging.error(f"Error waiting for loading to finish: {str(e)}")
 
 
 
@@ -66,7 +83,7 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
             )
             try:
                 password_input.send_keys(password)
-                logging.info(f'Sent password as {password}')
+                # logging.info(f'Sent password as {password}')
             except:
                 logging.info("Unable to send password")
 
@@ -96,7 +113,7 @@ def get_to_EIS_homepage_with_retry(username, password, driver, url, max_retries=
                     # If no error element is found, just pass and continue
                     pass
                 success=False
-                
+
             except Exception as e:
                 # If the element is not found within 10 seconds, handle the timeout
                 logging.info("No password error found, succesfully logged in.")
@@ -411,17 +428,17 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
     except:
         logging.info('Unable to click on adm audit')
 
-    #could not get this dropdown to work without a brief sleep
-    time.sleep(3)
-
+    #Need to register that the page has fully loaded
+    wait_for_loading_to_finish(driver)
+    
     dropdown = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
     )
     try:
         dropdown.click()
         logging.info('Clicked on dropdown')
-    except:
-        logging.info('Unable to click on dropdown')
+    except Exception as e:
+        logging.info(f'Unable to click on dropdown due to {e}')
 
     file_download = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
@@ -433,11 +450,11 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
         
     except Exception as e:
         logging.info(f'Failed to download {schools1} adm audit')
-        
-    time.sleep(3)
     
+    # wait_for_cr_files(download_directory, sleep_time=10)
+    time.sleep(5)
     
-    #---------------------------------------get student membership------------------------------
+#     #---------------------------------------get student membership------------------------------
     
     driver.back()
 
@@ -458,6 +475,7 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
         logging.info('Student Membership clicked')
     except:
         logging.info('Unable to click on student membership')
+
     
     loaded = WebDriverWait(driver, 30).until(lambda d: div_style_changed(d))
 
@@ -497,12 +515,14 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
         logging.info('Clicked on View Report button')
     except:
         logging.info('Unable to click on View Report button')
+
+    wait_for_loading_to_finish(driver)
     
     
-    #could not get this dropdown to work without a brief sleep
-    time.sleep(30)
-    #Need something dynamic to rexognize when the spinner dissapears
-    #This is a temporary fix
+#     #could not get this dropdown to work without a brief sleep
+#     time.sleep(30)
+#     #Need something dynamic to rexognize when the spinner dissapears
+#     #This is a temporary fix
 
     dropdown = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
@@ -526,3 +546,6 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
         
     driver.close() #close current window
     
+
+
+
