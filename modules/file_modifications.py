@@ -72,7 +72,14 @@ def send_to_SFTP(download_dir, sftp_path, str_match):
 
     if not matching_files:
         logging.error(f'No files found in {download_dir} matching {str_match}')
-        return
+        raise FileNotFoundError(f'No files found in {download_dir} matching {str_match}')
+
+        # Check if there are exactly 2 matching files per adm audit and studentmembership
+    if len(matching_files) != 2:
+        logging.error(f'Expected 4 files matching {str_match}, but found {len(matching_files)}. Failing process.')
+        raise RuntimeError(f'Expected 4 files matching {str_match}, but found {len(matching_files)}.')
+    else:
+        logging.info(f'Found {len(matching_files)} files matching {str_match}')
 
     # Initialize an empty list to hold DataFrames
     dataframes = []

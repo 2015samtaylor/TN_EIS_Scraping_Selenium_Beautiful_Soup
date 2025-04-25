@@ -518,11 +518,7 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
 
     wait_for_loading_to_finish(driver)
     
-    
-#     #could not get this dropdown to work without a brief sleep
-#     time.sleep(30)
-#     #Need something dynamic to rexognize when the spinner dissapears
-#     #This is a temporary fix
+
 
     dropdown = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//img[@alt='Export drop down menu']"))
@@ -530,8 +526,8 @@ def get_adm_audit_student_membership(driver, xpaths1, xpaths2, schools1):
     try:
         dropdown.click()
         logging.info('Clicked on dropdown')
-    except:
-        logging.info('Unable to click on dropdown')
+    except Exception as e:
+        logging.error(f'Unable to click on dropdown due to error: {str(e)}')  # Log the exception details
 
     file_download = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.XPATH, "//a[@alt='CSV (comma delimited)']"))
