@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException, ElementClickInterceptedException, WebDriverException
 from selenium.webdriver.support.ui import Select
-from .file_modifications import wait_for_cr_files
+
 # -------------------------------------------------------------------------------
 # If it is a 500 error, there is no solution
 
